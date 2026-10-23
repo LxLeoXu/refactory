@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+
     [Header("Pohyb")]
     public float moveSpeed = 6f;
 
@@ -17,6 +18,10 @@ public class PlayerController : MonoBehaviour
     public float projectileSpeed = 12f;
     public float projectileLifetime = 2f;
     public float fireRate = 0.25f;
+    public float spriteAngleOffset = 0f;
+    public float muzzleDistance = 0.6f;     // guľka vyletí kúsok pred hráča
+    public float spreadAngle = 1.5f;        // malý rozptyl v stupňoch (0 = presná)
+    public bool autoFire = false;    
 
     Rigidbody2D rb;
     Camera cam;
@@ -131,22 +136,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void HandleAttack()
-    {
-        if (!attackAction.IsPressed() || Time.time < nextFireTime || projectilePrefab == null)
-            return;
+void HandleAttack()
+{
+    bool wantsToFire = autoFire ? attackAction.IsPressed() : attackAction.WasPressedThisFrame();
+    if (!wantsToFire || Time.time < nextFireTime || projectilePrefab == null)
+        return;
 
-        nextFireTime = Time.time + fireRate;
+    nextFireTime = Time.time + fireRate;
 
-        float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
-        GameObject proj = Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, angle));
+    float spread = Random.Range(-spreadAngle, spreadAngle);
+    Vector2 dir = Quaternion.Euler(0, 0, spread) * aimDir;
+    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        if (proj.TryGetComponent(out Rigidbody2D prb))
-        {
-            prb.gravityScale = 0f;
-            prb.linearVelocity = aimDir * projectileSpeed;   // Unity 2022 a staršie: prb.velocity
-        }
+    Vector3 spawnPos = transform.position + (Vector3)(dir * muzzleDistance);
+    GameObject proj = Instantiate(projectilePrefab, spawnPos,
+        Quaternion.Euler(0, 0, angle + spriteAngleOffset));
 
-        Destroy(proj, projectileLifetime);
-    }
+    Projectile p = proj.GetComponent<Projectile>();
+    if (p == null)
+        p = proj.AddComponent<Projectile>();
+
+    p.Init(dir, projectileSpeed, GetComponent<Collider2D>());
+
+    Destroy(proj, projectileLifetime);
+}
 }
