@@ -210,10 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 3758471200260753988, guid: fea38905fc47b6d45a28400f1c85fa3c, type: 3}
-  itemId: iron
+  pickupPrefab: {fileID: 4636014848307618362, guid: fdbe27ab2cf77b744a5f94b70dd9484a, type: 3}
+  itemId: wood
   minAmount: 1
-  maxAmount: 3
+  maxAmount: 2
   dropChance: 0.75
 --- !u!114 &2995996859764942187
 MonoBehaviour:
