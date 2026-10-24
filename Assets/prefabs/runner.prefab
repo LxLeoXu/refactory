@@ -181,11 +181,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18fc4be1b0892640a6578b32d8a8e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  behavior: 1
   maxHealth: 15
   projectileDamage: 10
   moveSpeed: 4
   contactDamage: 5
   attackCooldown: 1
+  runnerTriggerDistance: 7
+  dashWindup: 0.4
+  dashSpeed: 9
+  dashDuration: 0.25
+  dashCooldown: 2.3
+  preferredDistance: 5
+  shootRange: 9
+  shootCooldown: 1.5
+  bulletSpeed: 7
+  bulletDamage: 7
+  bulletLifetime: 3
 --- !u!114 &2190308610801320075
 MonoBehaviour:
   m_ObjectHideFlags: 0
