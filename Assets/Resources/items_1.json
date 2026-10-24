@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "iron",
+      "name": "Iron",
+      "type": "Material",
+      "maxStack": 999
+    },
+    {
+      "id": "crystal",
+      "name": "Crystal",
+      "type": "Material",
+      "maxStack": 999
+    },
+    {
+      "id": "scrap",
+      "name": "Scrap",
+      "type": "Material",
+      "maxStack": 999
+    }
+  ]
+}
