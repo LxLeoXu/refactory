@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
     public float spriteAngleOffset = 0f;
     public float muzzleDistance = 0.6f;     // guľka vyletí kúsok pred hráča
     public float spreadAngle = 1.5f;        // malý rozptyl v stupňoch (0 = presná)
-    public bool autoFire = false;    
+    public bool autoFire = false;
+    [Header("Weapon Damage")]
+    public float projectileDamage = 10f;    
 
     Rigidbody2D rb;
     Camera cam;
@@ -156,7 +158,12 @@ void HandleAttack()
     if (p == null)
         p = proj.AddComponent<Projectile>();
 
-    p.Init(dir, projectileSpeed, GetComponent<Collider2D>());
+    p.Init(
+    dir,
+    projectileSpeed,
+    GetComponent<Collider2D>(),
+    projectileDamage
+);
 
     Destroy(proj, projectileLifetime);
 }

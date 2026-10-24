@@ -20,6 +20,10 @@ public class PlayerStats : MonoBehaviour, IDamageable
     public bool restartOnDeath = true;
     public float restartDelay = 2f;
 
+    [Header("Armor")]
+    [Range(0f, 0.8f)]
+    public float armorReduction = 0f;
+
     public float Health { get; private set; }
     public float Hunger { get; private set; }
     public bool IsDead { get; private set; }
@@ -63,7 +67,8 @@ public class PlayerStats : MonoBehaviour, IDamageable
         if (IsDead || Time.time < invulnerableUntil) return;
 
         invulnerableUntil = Time.time + invulnerabilityTime;
-        Damage(damage);
+        float finalDamage = Mathf.Max(0f, damage) * (1f - Mathf.Clamp01(armorReduction));
+        Damage(finalDamage);
 
         if (!IsDead)
             StartCoroutine(Blink());
@@ -112,6 +117,24 @@ public class PlayerStats : MonoBehaviour, IDamageable
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    // Pouziva RunManager pri navrate do zakladne.
+    public void RespawnInBase()
+    {
+        CancelInvoke(nameof(Restart));
+        StopAllCoroutines();
+        IsDead = false;
+        invulnerableUntil = 0f;
+        Health = maxHealth;
+        Hunger = maxHunger;
+        if (sr != null) sr.color = baseColor;
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+        PlayerController pc = GetComponent<PlayerController>();
+        if (pc != null) pc.enabled = true;
+        OnHealthChanged?.Invoke(Health, maxHealth);
+        OnHungerChanged?.Invoke(Hunger, maxHunger);
     }
 
     IEnumerator Blink()

@@ -4,6 +4,7 @@ using UnityEngine;
 public class DungeonGenerator : MonoBehaviour
 {
     [Header("Dungeon")]
+    public bool generateOnStart = true;
     public int roomCount = 10;
     public Vector2 roomSize = new Vector2(20f, 12f);
     [Tooltip("0 = náhodný seed")]
@@ -31,7 +32,7 @@ public class DungeonGenerator : MonoBehaviour
 
     void Start()
     {
-        Generate();
+        if (generateOnStart) Generate();
     }
 
     [ContextMenu("Regenerate")]
@@ -81,7 +82,7 @@ public class DungeonGenerator : MonoBehaviour
 
             GameObject go = new GameObject($"Room {cell.x},{cell.y} ({type})");
             go.transform.SetParent(transform);
-            go.transform.position = new Vector3(cell.x * roomSize.x, cell.y * roomSize.y, 0f);
+            go.transform.position = transform.position + new Vector3(cell.x * roomSize.x, cell.y * roomSize.y, 0f);
 
             Room room = go.AddComponent<Room>();
             room.Init(cell, type, roomSize, connected, enemyPrefabs, bossPrefab, enemiesPerRoom,

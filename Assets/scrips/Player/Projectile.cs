@@ -2,12 +2,21 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
+
 {
+    
+    public float Damage { get; private set; } = 10f;
     Rigidbody2D rb;
     Vector2 velocity;
-
-    public void Init(Vector2 direction, float speed, Collider2D ownerCollider)
+    
+    public void Init(
+    
+    Vector2 direction,
+    float speed,
+    Collider2D ownerCollider,
+    float damage = 10f)
     {
+        Damage = Mathf.Max(0f, damage);
         rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Dynamic;
         rb.simulated = true;
