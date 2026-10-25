@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4018156189402396134}
   - component: {fileID: 8709580647615516921}
   - component: {fileID: 1048505343500434684}
+  - component: {fileID: 614721035137957035}
   m_Layer: 0
   m_Name: Enemy_Boss
   m_TagString: Untagged
@@ -193,3 +194,20 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &614721035137957035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760746419077068251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
+  pickupPrefab: {fileID: 634037062716000313, guid: c75ac64209c7100429f24a8cd14c5d77, type: 3}
+  itemId: weapon upgrade
+  minAmount: 1
+  maxAmount: 3
+  dropChance: 0.6

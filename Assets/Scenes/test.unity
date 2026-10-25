@@ -483,9 +483,11 @@ MonoBehaviour:
   player: {fileID: 989887416}
   cameraFollow: {fileID: 519420033}
   enemyPrefabs:
-  - {fileID: 4152020791366905440, guid: 1bbcd3bc5d8d991c1a6736de0fe2ea22, type: 3}
-  - {fileID: 8405586905713582779, guid: a62de27e9aefcd24da59c2802f112218, type: 3}
-  - {fileID: 4979247679133478016, guid: 059160647237425eb9ddbb71b8434139, type: 3}
+  - {fileID: 4152020791366905440, guid: 340e8284bc39fca4c9b5ac825e158bdd, type: 3}
+  - {fileID: 8405586905713582779, guid: 5d93c069aee345b4ebefe212f01c9886, type: 3}
+  - {fileID: 4979247679133478016, guid: f501ba8cc1b12aa42b26f059ccfc36d1, type: 3}
+  - {fileID: 4099685004705891625, guid: afee178ed0d837b4e85e6df403be7d5e, type: 3}
+  - {fileID: 1642017655457138705, guid: 51da0556caa6fd9448cc3b88c42dca8b, type: 3}
   bossPrefab: {fileID: 6760746419077068251, guid: 250128ec56ec30a4a9d6cea7c2c93436, type: 3}
   enemiesPerRoom: {x: 2, y: 5}
   chestPrefab: {fileID: 5675448989888532469, guid: a06b8f19047219341aa6d73bb4d5cbb5, type: 3}
@@ -540,10 +542,14 @@ MonoBehaviour:
   buffDuration: 35
   localPickupPosition: {x: -2.5, y: -1.5}
   buffSprites:
-  - {fileID: -4413133717973873856, guid: c08c2be1490cf374b851f9213a26d1bd, type: 3}
-  - {fileID: 8300486209384130364, guid: c08c2be1490cf374b851f9213a26d1bd, type: 3}
-  - {fileID: 1429432758898293420, guid: c08c2be1490cf374b851f9213a26d1bd, type: 3}
-  - {fileID: -1262458395802604583, guid: c08c2be1490cf374b851f9213a26d1bd, type: 3}
+  - {fileID: -4908605915849594817, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: 107646917, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: -73026854, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: 295256637, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: -1560897234, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: 386695658, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: 792417576, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: -2091721085, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
 --- !u!1 &164021299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,6 +1995,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4858668011856267950, guid: bac42ea8986b2074abb8355dc99b91ef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1877241466}
+    - targetCorrespondingSourceObject: {fileID: 4858668011856267950, guid: bac42ea8986b2074abb8355dc99b91ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1877241470}
   m_SourcePrefab: {fileID: 100100000, guid: bac42ea8986b2074abb8355dc99b91ef, type: 3}
 --- !u!4 &657396113 stripped
 Transform:
@@ -5791,6 +5800,21 @@ MonoBehaviour:
   glowRenderer: {fileID: 2051960210}
   gearDegreesPerSecond: 240
   animationSpeed: 3.5
+--- !u!114 &1877241470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877241461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ccb31e3ab442ac4e99be0d4f3ce8e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FactoryWeaponForge
+  interactionRange: 2.5
+  player: {fileID: 989887416}
+  crafting: {fileID: 298720167}
 --- !u!1 &1951681777 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5024644692067575249, guid: ff4e8d39ed9613341b4332f8ca4eafe9, type: 3}

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2280359699146592381}
   - component: {fileID: 7769974845908940357}
   - component: {fileID: 4388792268004325375}
+  - component: {fileID: 7806109294151075366}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -280,3 +281,18 @@ MonoBehaviour:
   shieldBonus: 0.15
   rapidFireReduction: 0.07
   showBuffs: 1
+--- !u!114 &7806109294151075366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148485782548991458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736594d3e567ec44a888befab04ed8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FactoryWeapons
+  equipped: 0
+  fallbackBaseDamage: 10
+  showWeaponHud: 1
