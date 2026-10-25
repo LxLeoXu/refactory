@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,6 +23,27 @@ public class BaseStorageChest : MonoBehaviour
     public float interactionRange = 2.5f;
     public List<StoredStack> storedItems = new List<StoredStack>();
 
+    [Serializable] class SaveData { public List<StoredStack> items = new List<StoredStack>(); }
+
+    string SavePath => Path.Combine(Application.persistentDataPath, "base_storage.json");
+
+    void Save()
+    {
+        SaveData data = new SaveData { items = storedItems };
+        File.WriteAllText(SavePath, JsonUtility.ToJson(data));
+    }
+
+    void Load()
+    {
+        if (!File.Exists(SavePath)) return;
+        SaveData data = JsonUtility.FromJson<SaveData>(File.ReadAllText(SavePath));
+        if (data != null && data.items != null) storedItems = data.items;
+    }
+
+    void OnDestroy() { Save(); }
+    void OnApplicationQuit() { Save(); }
+    void OnApplicationPause(bool paused) { if (paused) Save(); }
+
     public bool IsOpen { get; private set; }
 
     PlayerController playerController;
@@ -31,6 +53,7 @@ public class BaseStorageChest : MonoBehaviour
 
     void Start()
     {
+        Load();
         if (player == null)
         {
             GameObject p = GameObject.FindGameObjectWithTag("Player");
@@ -117,6 +140,7 @@ public class BaseStorageChest : MonoBehaviour
         StoredStack stack = storedItems.Find(x => x != null && x.itemId == itemId);
         if (stack == null) storedItems.Add(new StoredStack { itemId = itemId, amount = moved });
         else stack.amount += moved;
+        Save();
         return moved;
     }
 
@@ -129,6 +153,7 @@ public class BaseStorageChest : MonoBehaviour
         stack.amount -= moved;
         if (stack.amount == 0) storedItems.Remove(stack);
         inventory.AddItem(itemId, moved);
+        Save();
         return moved;
     }
 
