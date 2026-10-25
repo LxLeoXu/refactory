@@ -149,8 +149,8 @@ public class PlayerBuffs : MonoBehaviour
     {
         if (!showBuffs || active.Count == 0) return;
         float width = 225f;
-        float x = Mathf.Max(10f, (Screen.width - width) * 0.5f);
-        float y = 10f;
+        float x = 10f;
+        float y = 110f;
         GUI.Box(new Rect(x, y, width, 27f + active.Count * 23f), "ACTIVE BUFFS");
         int line = 0;
         foreach (var entry in active)

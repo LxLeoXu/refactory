@@ -1,5 +1,8 @@
+using System;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem; 
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
@@ -12,6 +15,20 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed = 18f;
     public float dashDuration = 0.15f;
     public float dashCooldown = 0.8f;
+
+    [Header("Dash - ochrana a efekt")]
+    [Tooltip("Ochrana od zaciatku dashu (0.2 s = 0.15 s dash + 0.05 s tolerancia).")]
+    [Min(0f)] public float dashInvulnerabilityDuration = 0.2f;
+    public bool enableDashTrail = true;
+    [Range(0.02f, 0.2f)] public float dashTrailInterval = 0.045f;
+    [Range(0.05f, 1f)] public float dashTrailLifetime = 0.18f;
+    [Range(0f, 1f)] public float dashTrailOpacity = 0.35f;
+    public bool showDashCooldownHUD = true;
+
+    // PlayerStats cez toto kontroluje, ci ma zasah ignorovat.
+    public bool IsDashInvulnerable => isActiveAndEnabled && Time.time < dashProtectionEndTime;
+    public bool IsDashing => isDashing;
+    public float DashCooldownRemaining => Mathf.Max(0f, nextDashTime - Time.time);
 
     [Header("Útok")]
     public GameObject projectilePrefab;
@@ -43,6 +60,11 @@ public class PlayerController : MonoBehaviour
     float nextDashTime;
     float nextFireTime;
     Vector2 dashDir;
+    float dashProtectionEndTime;
+    float nextTrailTime;
+    float lastUsedDashCooldown = 0.8f;
+    SpriteRenderer playerSprite;
+    PlayerStats stats;
 
     void Awake()
     {
@@ -50,6 +72,10 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         rb.gravityScale = 0f;
         rb.freezeRotation = true;
+        // U rychleho dashu pomaha zabranit prechodu cez tenke kolidery.
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        playerSprite = GetComponentInChildren<SpriteRenderer>();
+        stats = GetComponent<PlayerStats>();
 
         moveAction = new InputAction("Move", InputActionType.Value);
         moveAction.AddCompositeBinding("2DVector")
@@ -87,6 +113,26 @@ public class PlayerController : MonoBehaviour
         attackAction.Disable();
         aimStickAction.Disable();
         mousePosAction.Disable();
+        ResetDashState();
+    }
+
+    // Pri smrti alebo navrate do zakladne nezostane aktivna ochrana ani cooldown.
+    public void ResetDashState()
+    {
+        isDashing = false;
+        dashEndTime = 0f;
+        dashProtectionEndTime = 0f;
+        nextDashTime = 0f;
+        nextTrailTime = 0f;
+    }
+
+    void OnDestroy()
+    {
+        moveAction?.Dispose();
+        dashAction?.Dispose();
+        attackAction?.Dispose();
+        aimStickAction?.Dispose();
+        mousePosAction?.Dispose();
     }
 
     void Update()
@@ -94,6 +140,7 @@ public class PlayerController : MonoBehaviour
         moveInput = moveAction.ReadValue<Vector2>();
         UpdateAim();
         HandleDash();
+        UpdateDashTrail();
         HandleAttack();
     }
 
@@ -133,12 +180,96 @@ public class PlayerController : MonoBehaviour
             // dash v smere pohybu, ak stojíš, tak smerom k mieridlu
             dashDir = moveInput.sqrMagnitude > 0.01f ? moveInput.normalized : aimDir;
             isDashing = true;
-            dashEndTime = Time.time + dashDuration;
-            nextDashTime = Time.time + dashCooldown;
+            dashEndTime = Time.time + Mathf.Max(0.01f, dashDuration);
+            // Ochrana moze trvat o kratku chvilu dlhsie ako samotny dash.
+            dashProtectionEndTime = Time.time + Mathf.Max(0f, dashInvulnerabilityDuration);
+            lastUsedDashCooldown = Mathf.Max(0.01f, dashCooldown);
+            nextDashTime = Time.time + Mathf.Max(dashDuration, dashCooldown);
+            nextTrailTime = Time.time;
         }
     }
 
-void HandleAttack()
+    void UpdateDashTrail()
+    {
+        if (!isDashing || !enableDashTrail || Time.time < nextTrailTime)
+            return;
+
+        nextTrailTime = Time.time + Mathf.Max(0.02f, dashTrailInterval);
+        SpawnDashAfterimage();
+    }
+
+    void SpawnDashAfterimage()
+    {
+        if (playerSprite == null || playerSprite.sprite == null) return;
+
+        // Kopia obrazku bez collidera: nenaraza do stien ani do nepriatelov.
+        GameObject ghost = new GameObject("DashAfterimage");
+        ghost.transform.position = playerSprite.transform.position;
+        ghost.transform.rotation = playerSprite.transform.rotation;
+        ghost.transform.localScale = playerSprite.transform.lossyScale;
+
+        SpriteRenderer ghostSprite = ghost.AddComponent<SpriteRenderer>();
+        ghostSprite.sprite = playerSprite.sprite;
+        ghostSprite.sharedMaterial = playerSprite.sharedMaterial;
+        ghostSprite.sortingLayerID = playerSprite.sortingLayerID;
+        ghostSprite.sortingOrder = playerSprite.sortingOrder - 1;
+        ghostSprite.flipX = playerSprite.flipX;
+        ghostSprite.flipY = playerSprite.flipY;
+        ghostSprite.drawMode = playerSprite.drawMode;
+        if (playerSprite.drawMode != SpriteDrawMode.Simple)
+            ghostSprite.size = playerSprite.size;
+
+        Color c = playerSprite.color;
+        ghostSprite.color = new Color(c.r, c.g, c.b, Mathf.Min(c.a, dashTrailOpacity));
+
+        float lifetime = Mathf.Max(0.05f, dashTrailLifetime);
+        Destroy(ghost, lifetime + 0.05f); // zaloha, aj keby sa prerusila coroutine
+        StartCoroutine(FadeAfterimage(ghostSprite, lifetime));
+    }
+
+    IEnumerator FadeAfterimage(SpriteRenderer ghostSprite, float lifetime)
+    {
+        Color startColor = ghostSprite.color;
+        float passed = 0f;
+        while (ghostSprite != null && passed < lifetime)
+        {
+            passed += Time.deltaTime;
+            Color c = startColor;
+            c.a = startColor.a * (1f - Mathf.Clamp01(passed / lifetime));
+            ghostSprite.color = c;
+            yield return null;
+        }
+        if (ghostSprite != null) Destroy(ghostSprite.gameObject);
+    }
+
+    void OnGUI()
+    {
+        if (!showDashCooldownHUD || !isActiveAndEnabled || (stats != null && stats.IsDead))
+            return;
+
+        const float width = 180f;
+        float x = Mathf.Max(8f, Screen.width - width - 12f);
+        float y = Mathf.Max(8f, Screen.height - 76f);
+        GUI.Box(new Rect(x, y, width, 64f), "DASH [SPACE]");
+
+        float remaining = DashCooldownRemaining;
+        GUI.Label(new Rect(x + 12f, y + 23f, width - 24f, 20f),
+            remaining <= 0f ? "READY" : "Cooldown: " + remaining.ToString("0.0") + " s");
+
+        GUI.Box(new Rect(x + 12f, y + 46f, width - 24f, 9f), GUIContent.none);
+        float progress = remaining <= 0f
+            ? 1f
+            : 1f - Mathf.Clamp01(remaining / Mathf.Max(0.01f, lastUsedDashCooldown));
+        Color oldColor = GUI.color;
+        GUI.color = remaining <= 0f
+            ? new Color(0.3f, 0.9f, 0.7f, 0.95f)
+            : new Color(0.65f, 0.75f, 1f, 0.95f);
+        GUI.DrawTexture(new Rect(x + 13f, y + 47f, (width - 26f) * progress, 7f),
+            Texture2D.whiteTexture);
+        GUI.color = oldColor;
+    }
+
+    void HandleAttack()
 {
     bool wantsToFire = autoFire ? attackAction.IsPressed() : attackAction.WasPressedThisFrame();
     if (!wantsToFire || Time.time < nextFireTime || projectilePrefab == null)
@@ -146,7 +277,7 @@ void HandleAttack()
 
     nextFireTime = Time.time + fireRate;
 
-    float spread = Random.Range(-spreadAngle, spreadAngle);
+    float spread = UnityEngine.Random.Range(-spreadAngle, spreadAngle);
     Vector2 dir = Quaternion.Euler(0, 0, spread) * aimDir;
     float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 

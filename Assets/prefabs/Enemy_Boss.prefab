@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
   pickupPrefab: {fileID: 634037062716000313, guid: c75ac64209c7100429f24a8cd14c5d77, type: 3}
-  itemId: weapon upgrade
+  itemId: weapon_upgrade
   minAmount: 1
   maxAmount: 3
   dropChance: 0.6

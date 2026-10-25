@@ -1,5 +1,6 @@
-using System;
+
 using System.Collections;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,6 +34,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
     public event Action OnDied;
 
     SpriteRenderer sr;
+    PlayerController controller;
     Color baseColor = Color.white;
     float invulnerableUntil;
 
@@ -42,6 +44,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
         Hunger = maxHunger;
 
         sr = GetComponentInChildren<SpriteRenderer>();
+        controller = GetComponent<PlayerController>();
         if (sr != null) baseColor = sr.color;
     }
 
@@ -64,7 +67,10 @@ public class PlayerStats : MonoBehaviour, IDamageable
     // volajú nepriatelia a ich projektily
     public void TakeDamage(float damage, Vector2 hitDirection)
     {
-        if (IsDead || Time.time < invulnerableUntil) return;
+        if (IsDead) return;
+        // Dash ochrana blokuje nepriatelske utoky, ale nespotrebuje bezny i-frame.
+        if (controller != null && controller.IsDashInvulnerable) return;
+        if (Time.time < invulnerableUntil) return;
 
         invulnerableUntil = Time.time + invulnerabilityTime;
         float finalDamage = Mathf.Max(0f, damage) * (1f - Mathf.Clamp01(armorReduction));
@@ -132,7 +138,11 @@ public class PlayerStats : MonoBehaviour, IDamageable
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null) rb.linearVelocity = Vector2.zero;
         PlayerController pc = GetComponent<PlayerController>();
-        if (pc != null) pc.enabled = true;
+        if (pc != null)
+        {
+            pc.ResetDashState();
+            pc.enabled = true;
+        }
         OnHealthChanged?.Invoke(Health, maxHealth);
         OnHungerChanged?.Invoke(Hunger, maxHunger);
     }
