@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1111037641, guid: 836add21b6bb02d4d9c7ed309fd41edd, type: 3}
+  m_Sprite: {fileID: -2796727066320189465, guid: 07f3a42638fe7074b88bfd5e427695d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.005, y: -0.01}
+  m_Offset: {x: 0.025, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -139,8 +139,8 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
-  m_AutoTiling: 1
-  m_Size: {x: 0.09, y: 0.14}
+  m_AutoTiling: 0
+  m_Size: {x: 0.4, y: 0.7}
   m_EdgeRadius: 0
 --- !u!50 &6483193009593007624
 Rigidbody2D:
@@ -210,10 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 4636014848307618362, guid: fdbe27ab2cf77b744a5f94b70dd9484a, type: 3}
-  itemId: wood
+  pickupPrefab: {fileID: 3758471200260753988, guid: fea38905fc47b6d45a28400f1c85fa3c, type: 3}
+  itemId: iron
   minAmount: 1
-  maxAmount: 2
+  maxAmount: 3
   dropChance: 0.75
 --- !u!114 &2995996859764942187
 MonoBehaviour:

@@ -16,10 +16,14 @@ public class FactoryMachine : MonoBehaviour
     public float productionTime = 5f;
     public float interactionRange = 2.5f;
 
-    private bool isProducing;
-    private bool isReady;
+private bool isProducing;
+private bool isReady;
 
-    private float timer;
+// Stav stroja pre animacie a kontrolky
+public bool IsProducing => isProducing;
+public bool IsReady => isReady;
+
+private float timer;
 
     private string outputItemId;
     private int outputAmount;

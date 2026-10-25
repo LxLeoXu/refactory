@@ -12,10 +12,7 @@ GameObject:
   - component: {fileID: 6118613363345748676}
   - component: {fileID: 4018156189402396134}
   - component: {fileID: 8709580647615516921}
-  - component: {fileID: 1342398967093274902}
-  - component: {fileID: 1225122961375363257}
-  - component: {fileID: 4549935372192559824}
-  - component: {fileID: 6391611317879518451}
+  - component: {fileID: 8536803040883861053}
   m_Layer: 0
   m_Name: Enemy_Boss
   m_TagString: Untagged
@@ -153,8 +150,8 @@ MonoBehaviour:
   bulletSpeed: 7
   bulletDamage: 7
   bulletLifetime: 3
---- !u!61 &1342398967093274902
-BoxCollider2D:
+--- !u!58 &8536803040883861053
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -187,66 +184,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 1
-    adaptiveTiling: 0
-  m_AutoTiling: 1
-  m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
---- !u!114 &1225122961375363257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6760746419077068251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 4973731900131292018, guid: 675ee8f60fe6ca44c8c0b4ac7d4ab31e, type: 3}
-  itemId: armor_plate
-  minAmount: 1
-  maxAmount: 3
-  dropChance: 0.25
---- !u!114 &4549935372192559824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6760746419077068251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 6819703998320127780, guid: e81318ab68f286f4ebbb8dc832f18d49, type: 3}
-  itemId: scrap
-  minAmount: 4
-  maxAmount: 6
-  dropChance: 0.5
---- !u!114 &6391611317879518451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6760746419077068251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 5007694292722502786, guid: a196ff51bee254444b25f82e84e10c45, type: 3}
-  itemId: weapon_part
-  minAmount: 1
-  maxAmount: 3
-  dropChance: 0.25
+  m_Offset: {x: 0, y: -0.1}
+  m_Radius: 0.4

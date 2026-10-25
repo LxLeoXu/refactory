@@ -12,11 +12,9 @@ GameObject:
   - component: {fileID: 2639579641674296295}
   - component: {fileID: 5294964553684180970}
   - component: {fileID: 140910625882364157}
+  - component: {fileID: 3085971828098713528}
   - component: {fileID: 3284809678797653376}
   - component: {fileID: 200568434126535033}
-  - component: {fileID: 3085971828098713528}
-  - component: {fileID: 8533671530129919361}
-  - component: {fileID: 6251903062660663892}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -88,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 368543389579951487, guid: 34f05a92001334563b5d401d4785b370, type: 3}
+  m_Sprite: {fileID: -529826210, guid: d6eb1a3e89841444692c199025e0dacd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,6 +152,23 @@ MonoBehaviour:
   bulletSpeed: 7
   bulletDamage: 7
   bulletLifetime: 3
+--- !u!114 &3085971828098713528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8405586905713582779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
+  pickupPrefab: {fileID: 3758471200260753988, guid: fea38905fc47b6d45a28400f1c85fa3c, type: 3}
+  itemId: iron
+  minAmount: 1
+  maxAmount: 3
+  dropChance: 0.75
 --- !u!61 &3284809678797653376
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -188,7 +203,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.035}
+  m_Offset: {x: 0, y: -0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -197,8 +212,8 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
-  m_AutoTiling: 1
-  m_Size: {x: 0.16, y: 0.09}
+  m_AutoTiling: 0
+  m_Size: {x: 0.75, y: 0.4}
   m_EdgeRadius: 0
 --- !u!114 &200568434126535033
 MonoBehaviour:
@@ -217,54 +232,3 @@ MonoBehaviour:
   - {fileID: -458641133534639524, guid: 34f05a92001334563b5d401d4785b370, type: 3}
   - {fileID: -204249033, guid: 34f05a92001334563b5d401d4785b370, type: 3}
   - {fileID: 2003787945, guid: 34f05a92001334563b5d401d4785b370, type: 3}
---- !u!114 &3085971828098713528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8405586905713582779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 975535660611563347, guid: 71753abb794c48463a53588e4dacb4d5, type: 3}
-  itemId: iron
-  minAmount: 1
-  maxAmount: 2
-  dropChance: 0.25
---- !u!114 &8533671530129919361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8405586905713582779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 4636014848307618362, guid: ca7f5545075132a48875cb24c1809643, type: 3}
-  itemId: wood
-  minAmount: 1
-  maxAmount: 3
-  dropChance: 0.25
---- !u!114 &6251903062660663892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8405586905713582779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 8714134300973530734, guid: 58c76097e67c8de1faec26269bcb6099, type: 3}
-  itemId: scrap
-  minAmount: 1
-  maxAmount: 2
-  dropChance: 0.125

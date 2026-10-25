@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 4862798604942066727}
   - component: {fileID: 235689986703266618}
   - component: {fileID: 8650205001311172020}
-  - component: {fileID: 3766014674739675897}
   - component: {fileID: 2093189551510695890}
-  - component: {fileID: 6979324057827661298}
+  - component: {fileID: 3766014674739675897}
   m_Layer: 0
   m_Name: tank
   m_TagString: Untagged
@@ -87,12 +86,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1536633473, guid: 66846e7b070e27d2a8220b8acf6d78e1, type: 3}
+  m_Sprite: {fileID: -8513860805877293909, guid: 7a61583ce3d719048a375b86e93c6a4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_DrawMode: 1
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -136,12 +135,12 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.16, y: 0.16}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 1
     adaptiveTiling: 0
-  m_AutoTiling: 1
-  m_Size: {x: 0.08, y: 0.14}
+  m_AutoTiling: 0
+  m_Size: {x: 0.4, y: 0.6}
   m_EdgeRadius: 0
 --- !u!50 &235689986703266618
 Rigidbody2D:
@@ -199,6 +198,23 @@ MonoBehaviour:
   bulletSpeed: 7
   bulletDamage: 7
   bulletLifetime: 3
+--- !u!114 &2093189551510695890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979247679133478016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
+  pickupPrefab: {fileID: 3758471200260753988, guid: fea38905fc47b6d45a28400f1c85fa3c, type: 3}
+  itemId: iron
+  minAmount: 1
+  maxAmount: 3
+  dropChance: 0.75
 --- !u!114 &3766014674739675897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,37 +232,3 @@ MonoBehaviour:
   - {fileID: -253838701, guid: 66846e7b070e27d2a8220b8acf6d78e1, type: 3}
   - {fileID: 1057247970, guid: 66846e7b070e27d2a8220b8acf6d78e1, type: 3}
   - {fileID: 945265888, guid: 66846e7b070e27d2a8220b8acf6d78e1, type: 3}
---- !u!114 &2093189551510695890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4979247679133478016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 975535660611563347, guid: 40f60e2011659bf43b334e4dc5d727c6, type: 3}
-  itemId: iron
-  minAmount: 3
-  maxAmount: 5
-  dropChance: 0.5
---- !u!114 &6979324057827661298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4979247679133478016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 8714134300973530734, guid: c8c4b11df68fb384f83b67b61aabd514, type: 3}
-  itemId: scrap
-  minAmount: 3
-  maxAmount: 5
-  dropChance: 0.5
