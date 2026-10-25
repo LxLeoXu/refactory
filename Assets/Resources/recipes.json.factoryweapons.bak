@@ -1,0 +1,92 @@
+{
+  "recipes": [
+    {
+      "id": "metal_plate_recipe",
+      "name": "Metal Plate",
+      "ingredients": [
+        {
+          "itemId": "iron",
+          "amount": 5
+        }
+      ],
+      "resultItemId": "metal_plate",
+      "resultAmount": 1
+    },
+    {
+      "id": "weapon_part_recipe",
+      "name": "Weapon Part",
+      "ingredients": [
+        {
+          "itemId": "scrap",
+          "amount": 4
+        },
+        {
+          "itemId": "crystal",
+          "amount": 1
+        }
+      ],
+      "resultItemId": "weapon_part",
+      "resultAmount": 1
+    },
+    {
+      "id": "armor_plate_recipe",
+      "name": "Armor Plate",
+      "ingredients": [
+        {
+          "itemId": "metal_plate",
+          "amount": 2
+        },
+        {
+          "itemId": "scrap",
+          "amount": 3
+        }
+      ],
+      "resultItemId": "armor_plate",
+      "resultAmount": 1
+    },
+    {
+      "id": "health_potion_recipe",
+      "name": "Health Potion",
+      "ingredients": [
+        {
+          "itemId": "crystal",
+          "amount": 2
+        }
+      ],
+      "resultItemId": "health_potion",
+      "resultAmount": 1
+    },
+    {
+      "id": "weapon_upgrade_recipe",
+      "name": "Weapon Upgrade",
+      "ingredients": [
+        {
+          "itemId": "weapon_part",
+          "amount": 2
+        },
+        {
+          "itemId": "crystal",
+          "amount": 3
+        }
+      ],
+      "resultItemId": "weapon_upgrade",
+      "resultAmount": 1
+    },
+    {
+      "id": "armor_upgrade_recipe",
+      "name": "Armor Upgrade",
+      "ingredients": [
+        {
+          "itemId": "armor_plate",
+          "amount": 2
+        },
+        {
+          "itemId": "iron",
+          "amount": 5
+        }
+      ],
+      "resultItemId": "armor_upgrade",
+      "resultAmount": 1
+    }
+  ]
+}

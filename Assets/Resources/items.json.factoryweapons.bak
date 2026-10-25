@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "iron",
+      "name": "Iron",
+      "type": "Material",
+      "maxStack": 999
+    },
+    {
+      "id": "scrap",
+      "name": "Scrap",
+      "type": "Material",
+      "maxStack": 999
+    },
+    {
+      "id": "crystal",
+      "name": "Crystal",
+      "type": "Material",
+      "maxStack": 999
+    },
+    {
+      "id": "wood",
+      "name": "Wood",
+      "type": "Material",
+      "maxStack": 999
+    },
+    {
+      "id": "metal_plate",
+      "name": "Metal Plate",
+      "type": "Material",
+      "maxStack": 999
+    },
+    {
+      "id": "weapon_part",
+      "name": "Weapon Part",
+      "type": "Material",
+      "maxStack": 999
+    },
+    {
+      "id": "armor_plate",
+      "name": "Armor Plate",
+      "type": "Material",
+      "maxStack": 999
+    },
+    {
+      "id": "health_potion",
+      "name": "Health Potion",
+      "type": "Consumable",
+      "maxStack": 20
+    },
+    {
+      "id": "weapon_upgrade",
+      "name": "Weapon Upgrade",
+      "type": "Upgrade",
+      "maxStack": 10
+    },
+    {
+      "id": "armor_upgrade",
+      "name": "Armor Upgrade",
+      "type": "Upgrade",
+      "maxStack": 10
+    }
+  ]
+}

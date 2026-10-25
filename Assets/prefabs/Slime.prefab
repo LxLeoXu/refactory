@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8feeeb3c7f89ed3448bc09ee43d5d705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyLoot
-  pickupPrefab: {fileID: 3758471200260753988, guid: fea38905fc47b6d45a28400f1c85fa3c, type: 3}
+  pickupPrefab: {fileID: 3758471200260753988, guid: 3eb6d84408471394d8d6f729571f86b8, type: 3}
   itemId: iron
   minAmount: 1
   maxAmount: 3

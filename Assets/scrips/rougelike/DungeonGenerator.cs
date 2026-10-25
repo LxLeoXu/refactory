@@ -36,6 +36,20 @@ public class DungeonGenerator : MonoBehaviour
     public bool generateObstacles = true;
     public bool generateTraps = true;
 
+    [Header("Postupna obtiaznost - kazda nova vyprava")]
+    [Tooltip("Kazde zavolanie Generate() znamena dalsiu vypravu.")]
+    public bool increaseDifficultyEachRun = true;
+    [Min(1)] public int maxDifficultyLevel = 6;
+    [Min(0)] public int extraRoomsPerRun = 2;
+    [Min(2)] public int maxTotalRooms = 18;
+    [Min(0)] public int extraEnemiesPerRun = 1;
+    [Min(1)] public int depthStepsForExtraEnemy = 3;
+    [Min(1)] public int maxEnemiesPerRoom = 12;
+    [Range(0f, 0.25f)] public float eliteChanceIncreasePerRun = 0.05f;
+
+    public int CurrentDungeonLevel { get; private set; }
+    int generatedRunCount;
+
     [Header("Farby (ak nie su textury)")]
     public Color floorColor = new Color(0.18f, 0.18f, 0.22f);
     public Color wallColor = new Color(0.45f, 0.45f, 0.50f);
@@ -62,6 +76,16 @@ public class DungeonGenerator : MonoBehaviour
             else DestroyImmediate(oldRoom);
         }
 
+        // RunManager.StartRun() vola Generate() pri kazdej vyprave.
+        // Pocitadlo patri instancii generatora, nie statickej premennej.
+        generatedRunCount++;
+        CurrentDungeonLevel = increaseDifficultyEachRun
+            ? Mathf.Clamp(generatedRunCount, 1, Mathf.Max(1, maxDifficultyLevel))
+            : 1;
+        int targetRoomCount = Mathf.Min(
+            Mathf.Max(2, maxTotalRooms),
+            Mathf.Max(2, roomCount) + (CurrentDungeonLevel - 1) * Mathf.Max(0, extraRoomsPerRun));
+
         if (seed != 0) Random.InitState(seed);
 
         // Stromove rozlozenie miestnosti: nikdy nespajame 2+ susedov (bez nechcenych dveri).
@@ -72,7 +96,7 @@ public class DungeonGenerator : MonoBehaviour
         cells.Add(origin);
 
         int attempts = 0;
-        while (cells.Count < Mathf.Max(2, roomCount) && attempts++ < 3000)
+        while (cells.Count < targetRoomCount && attempts++ < 3000)
         {
             Vector2Int from = cells[Random.Range(0, cells.Count)];
             Vector2Int next = from + Dirs[Random.Range(0, Dirs.Length)];
@@ -107,9 +131,11 @@ public class DungeonGenerator : MonoBehaviour
         for (int i = countGuaranteed; i < available.Count; i++)
         {
             float roll = Random.value;
-            DungeonRoomKind kind = roll < eliteRoomChance ? DungeonRoomKind.Elite
-                : roll < eliteRoomChance + ruinsRoomChance ? DungeonRoomKind.Ruins
-                : roll < eliteRoomChance + ruinsRoomChance + ambushRoomChance ? DungeonRoomKind.Ambush
+            float eliteChance = Mathf.Clamp01(eliteRoomChance +
+                (CurrentDungeonLevel - 1) * eliteChanceIncreasePerRun);
+            DungeonRoomKind kind = roll < eliteChance ? DungeonRoomKind.Elite
+                : roll < eliteChance + ruinsRoomChance ? DungeonRoomKind.Ruins
+                : roll < eliteChance + ruinsRoomChance + ambushRoomChance ? DungeonRoomKind.Ambush
                 : DungeonRoomKind.Battle;
             special[available[i]] = kind;
         }
@@ -161,13 +187,38 @@ public class DungeonGenerator : MonoBehaviour
             if (kind == DungeonRoomKind.Ambush) amount += new Vector2Int(3, 3);
             if (kind == DungeonRoomKind.Ruins) amount += new Vector2Int(1, 1);
 
+            // V kazdej dalsej vyprave narasta pocet nepriatelov.
+            // Dalej od startu (podla depth) ich je o nieco viac.
+            // Mierumilovne miestnosti nechavame prazdne, bossa urcuje Room.cs.
+            if (!peaceful && kind != DungeonRoomKind.Start && kind != DungeonRoomKind.Boss)
+            {
+                int extra = (CurrentDungeonLevel - 1) * Mathf.Max(0, extraEnemiesPerRun)
+                    + depth[c] / Mathf.Max(1, depthStepsForExtraEnemy);
+                int cap = Mathf.Max(1, maxEnemiesPerRoom);
+                int low = Mathf.Clamp(Mathf.Min(amount.x, amount.y) + extra, 1, cap);
+                int high = Mathf.Clamp(Mathf.Max(amount.x, amount.y) + extra, low, cap);
+                amount = new Vector2Int(low, high);
+            }
+
             Room room = go.AddComponent<Room>();
             room.Init(c, roomType, sizes[c], connected, enemies, bossPrefab, amount,
                 cameraFollow, floorColor, wallColor, doorColor);
 
+            // Room.Build() uklada skutocne rozmery sten do localScale.
+            // Ulozime ich SKOR, nez DungeonRoomExtras nastavi tiled sprity.
+            Dictionary<Transform, Vector2> roomGeometry = useDungeonTileArt
+                ? CaptureRoomGeometry(go.transform)
+                : null;
+
             DungeonRoomExtras extras = go.AddComponent<DungeonRoomExtras>();
             extras.Setup(room, kind, chestPrefab, useDungeonTileArt, chestChanceInBattle,
                 sizes[c], generateObstacles, generateTraps);
+
+            // Bez ohladu na to, ci Extras nastavil scale na 0.32,
+            // obnovime presnu velkost stien, dveri a podlahy aj ich colliderov.
+            if (useDungeonTileArt)
+                RestoreRoomGeometry(roomGeometry);
+
             if (kind == DungeonRoomKind.Start) startRoom = room;
         }
 
@@ -176,7 +227,61 @@ public class DungeonGenerator : MonoBehaviour
             if (player != null) player.position = startRoom.transform.position;
             startRoom.ApplyCameraBounds();
         }
-        Debug.Log("Dungeon V2: " + cells.Count + " miestnosti, rozne velkosti, boss " + bossCell);
+        Debug.Log("Dungeon V3: vyprava " + generatedRunCount +
+            ", obtiaznost " + CurrentDungeonLevel + "/" + maxDifficultyLevel +
+            ", miestnosti " + cells.Count + ", boss " + bossCell);
+    }
+
+    // Tieto metody upravuju LEN geometriu vytvorenu v Room.Init().
+    // Prekazky, truhlice, pasce a nepriatelov nechavaju bez zmeny.
+    static Dictionary<Transform, Vector2> CaptureRoomGeometry(Transform roomRoot)
+    {
+        var originalSizes = new Dictionary<Transform, Vector2>();
+
+        foreach (Transform child in roomRoot)
+        {
+            bool isFloor = child.name == "Floor";
+            bool isWall = child.name == "Wall";
+            bool isDoor = child.name.StartsWith("Door_");
+            if (!isFloor && !isWall && !isDoor) continue;
+
+            // Room.Box() vytvara 1x1 sprite/collider a rozmery dava do scale.
+            originalSizes.Add(child, new Vector2(child.localScale.x, child.localScale.y));
+        }
+
+        return originalSizes;
+    }
+
+    static void RestoreRoomGeometry(Dictionary<Transform, Vector2> originalSizes)
+    {
+        if (originalSizes == null) return;
+
+        foreach (var entry in originalSizes)
+        {
+            Transform part = entry.Key;
+            if (part == null) continue;
+            Vector2 size = entry.Value;
+
+            // Tiled SpriteRenderer.size je v lokalnych jednotkach,
+            // preto musi byt Transform.localScale = (1, 1, 1).
+            part.localScale = Vector3.one;
+
+            SpriteRenderer sr = part.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.drawMode = SpriteDrawMode.Tiled;
+                sr.size = size;
+            }
+
+            // Room.Box() povodne pouzival collider 1x1 so scale.
+            // Po zmene scale musime zvacsit collider, aby hrac nepresiel stenou.
+            BoxCollider2D collider = part.GetComponent<BoxCollider2D>();
+            if (collider != null)
+            {
+                collider.size = size;
+                collider.offset = Vector2.zero;
+            }
+        }
     }
 
     float PickDimension(float small, float medium, float large)

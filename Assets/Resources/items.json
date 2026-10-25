@@ -60,5 +60,9 @@
       "type": "Upgrade",
       "maxStack": 10
     }
+  ,
+    {"id":"factory_scrap_shotgun","name":"Scrap Shotgun","type":"Weapon","maxStack":99},
+    {"id":"factory_crystal_rifle","name":"Crystal Rifle","type":"Weapon","maxStack":99},
+    {"id":"factory_furnace_cannon","name":"Furnace Cannon","type":"Weapon","maxStack":99}
   ]
 }
