@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3990725814692793741}
   - component: {fileID: 2280359699146592381}
   - component: {fileID: 7769974845908940357}
+  - component: {fileID: 4388792268004325375}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -262,3 +263,20 @@ MonoBehaviour:
   weaponDamageBonus: 3
   armorBonus: 0.1
   maxArmorReduction: 0.5
+--- !u!114 &4388792268004325375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148485782548991458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3978aad0bc5357149a3f538ac490da8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBuffs
+  speedBonus: 2
+  damageBonus: 4
+  shieldBonus: 0.15
+  rapidFireReduction: 0.07
+  showBuffs: 1
