@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 116692650}
   - component: {fileID: 116692651}
   - component: {fileID: 116692652}
+  - component: {fileID: 116692653}
   m_Layer: 0
   m_Name: Dungeon
   m_TagString: Untagged
@@ -488,7 +489,7 @@ MonoBehaviour:
   - {fileID: 4979247679133478016, guid: f501ba8cc1b12aa42b26f059ccfc36d1, type: 3}
   - {fileID: 4099685004705891625, guid: afee178ed0d837b4e85e6df403be7d5e, type: 3}
   - {fileID: 1642017655457138705, guid: 51da0556caa6fd9448cc3b88c42dca8b, type: 3}
-  bossPrefab: {fileID: 6760746419077068251, guid: 250128ec56ec30a4a9d6cea7c2c93436, type: 3}
+  bossPrefab: {fileID: 8664894876341164804, guid: 5deadc8d87b717d4eb72be53042a3d12, type: 3}
   enemiesPerRoom: {x: 2, y: 5}
   chestPrefab: {fileID: 5675448989888532469, guid: a06b8f19047219341aa6d73bb4d5cbb5, type: 3}
   chestChanceInBattle: 0.25
@@ -550,6 +551,23 @@ MonoBehaviour:
   - {fileID: 386695658, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
   - {fileID: 792417576, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
   - {fileID: -2091721085, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+--- !u!114 &116692653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116692648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2992e54a3b9c00f429d36af17d6d8a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonBalanceAndDetails
+  applyRecommendedBalance: 1
+  decorateRooms: 1
+  maxFloorDetailsPerRoom: 12
+  placeWallLamps: 1
+  markSpecialRooms: 1
 --- !u!1 &164021299
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +818,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftingSystem
   inventory: {fileID: 989887418}
   recipes: []
+--- !u!1 &308439946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6148485782548991458, guid: 4fa8924e41c696fa0aa9c379caee7b1a, type: 3}
+  m_PrefabInstance: {fileID: 989887415}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &325632442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,11 +3240,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5862606987366916586, guid: 4fa8924e41c696fa0aa9c379caee7b1a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5862606987366916586, guid: 4fa8924e41c696fa0aa9c379caee7b1a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5862606987366916586, guid: 4fa8924e41c696fa0aa9c379caee7b1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3274,7 +3297,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6148485782548991458, guid: 4fa8924e41c696fa0aa9c379caee7b1a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 989887428}
   m_SourcePrefab: {fileID: 100100000, guid: 4fa8924e41c696fa0aa9c379caee7b1a, type: 3}
 --- !u!4 &989887416 stripped
 Transform:
@@ -3286,7 +3312,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3990725814692793741, guid: 4fa8924e41c696fa0aa9c379caee7b1a, type: 3}
   m_PrefabInstance: {fileID: 989887415}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 308439946}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1f72e49b10bc34881ff40f382d9404, type: 3}
@@ -3297,12 +3323,30 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8901369702131918072, guid: 4fa8924e41c696fa0aa9c379caee7b1a, type: 3}
   m_PrefabInstance: {fileID: 989887415}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 308439946}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fde140f0e60b61c4a8c0755ac1bd70f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
+--- !u!114 &989887428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308439946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c13aa492f70a854d9bb024e3c2ba5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GJPixelArtRuntime
+  styleMiniTurrets: 1
+  styleForgeHeart: 1
+  showEquippedFactoryWeapon: 1
+  styleItemPickups: 1
+  decorateDungeon: 1
+  propsPerRoom: 2
 --- !u!1 &993616721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3532,6 +3576,57 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1065627376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065627378}
+  - component: {fileID: 1065627377}
+  m_Layer: 0
+  m_Name: GameJamMusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1065627377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065627376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2766680d85388e7408271dae44523c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GJGameMusic
+  baseMusic: {fileID: 8300000, guid: 91f95d4da3afd2b46a8ca32522fc3956, type: 3}
+  dungeonMusic: {fileID: 8300000, guid: d3f37ecfefdc5e44db34911bc6d705df, type: 3}
+  bossMusic: {fileID: 8300000, guid: 8e5ea417c03fd23439d36102469c76f1, type: 3}
+  volume: 0.32
+  crossfadeSeconds: 1
+  autoDetectRoom: 1
+  persistBetweenScenes: 1
+--- !u!4 &1065627378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065627376}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1066237194
 GameObject:
   m_ObjectHideFlags: 0
@@ -6644,3 +6739,4 @@ SceneRoots:
   - {fileID: 379710957}
   - {fileID: 989887415}
   - {fileID: 1426591897}
+  - {fileID: 1065627378}
