@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 7769974845908940357}
   - component: {fileID: 4388792268004325375}
   - component: {fileID: 7806109294151075366}
+  - component: {fileID: 7500300458571009219}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -189,6 +190,12 @@ MonoBehaviour:
   dashSpeed: 18
   dashDuration: 0.15
   dashCooldown: 0.8
+  dashInvulnerabilityDuration: 0.2
+  enableDashTrail: 1
+  dashTrailInterval: 0.045
+  dashTrailLifetime: 0.18
+  dashTrailOpacity: 0.35
+  showDashCooldownHUD: 1
   projectilePrefab: {fileID: 439016987716291354, guid: 93aabf31335bd414684c2af5001d6357, type: 3}
   projectileSpeed: 12
   projectileLifetime: 2
@@ -296,3 +303,26 @@ MonoBehaviour:
   equipped: 0
   fallbackBaseDamage: 10
   showWeaponHud: 1
+--- !u!114 &7500300458571009219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148485782548991458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c262139606fc08e46ae53894268fe962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GJFieldTurretDeployer
+  scrapCost: 5
+  scrapItemId: scrap
+  maximumActiveTurrets: 2
+  deployCooldown: 1
+  placementDistance: 1.2
+  turretLifetime: 15
+  turretRange: 7
+  fireInterval: 0.7
+  bulletDamage: 8
+  bulletSpeed: 13
+  showHint: 1
