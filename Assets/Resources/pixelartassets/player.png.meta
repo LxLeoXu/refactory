@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: b1cd2f22dc0c14a6c856d8a916d74dd4
+guid: 73d6101f44b6b4640aee2459cb91b155
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2016941586393158055
-    second: player_1_0
+      213: 4334783836991956000
+    second: player_0
   - first:
-      213: -3385887504281894762
-    second: player_1_1
+      213: 7388399842426930641
+    second: player_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,10 +129,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2cd956a94884807aab631f40615c13d8
-      internalID: -800245414
+      spriteID: 024a20edeee382c30800000000000000
+      internalID: 4334783836991956000
       vertices: []
       indices: 
       edges: []
@@ -151,10 +151,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ff2dc0b3271f5aedabe4a63543820705
-      internalID: -251822977
+      spriteID: 1d5c862e28ed88660800000000000000
+      internalID: 7388399842426930641
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe396bd0a4dd96cf3a7437df171e39c2
-      internalID: -371433969
+      spriteID: 482bd6b479fc74c4c8baea89b7d451d5
+      internalID: 730728372
       vertices: []
       indices: 
       edges: []
@@ -197,8 +197,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e62305908a32372a992d104140d633f
-      internalID: 1919972064
+      spriteID: eb0da29b309ba89439ed44662eefbd80
+      internalID: 717120040
       vertices: []
       indices: 
       edges: []
@@ -207,7 +207,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 64afd3b80c2fd5cc29ca32ea29167491
+    spriteID: d71eb224cb2c6ab4289a49b6bbf8cd25
     internalID: 0
     vertices: []
     indices: 
@@ -219,10 +219,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      player_0: -800245414
-      player_1: -251822977
-      player_2: -371433969
-      player_3: 1919972064
+      player_0: 4334783836991956000
+      player_1: 7388399842426930641
+      player_2: 730728372
+      player_3: 717120040
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
