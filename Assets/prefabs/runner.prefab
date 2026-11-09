@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2796727066320189465, guid: 07f3a42638fe7074b88bfd5e427695d7, type: 3}
+  m_Sprite: {fileID: 4644523113532460279, guid: 56544cfc2265d5746bc37ecb9d83d1e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteDirectionSwitcher
   directionalSprites:
-  - {fileID: -1111037641, guid: 836add21b6bb02d4d9c7ed309fd41edd, type: 3}
-  - {fileID: -1798863263, guid: 836add21b6bb02d4d9c7ed309fd41edd, type: 3}
-  - {fileID: 1677592072, guid: 836add21b6bb02d4d9c7ed309fd41edd, type: 3}
-  - {fileID: -698581508, guid: 836add21b6bb02d4d9c7ed309fd41edd, type: 3}
+  - {fileID: 4644523113532460279, guid: 56544cfc2265d5746bc37ecb9d83d1e3, type: 3}
+  - {fileID: -5111703912395106863, guid: 56544cfc2265d5746bc37ecb9d83d1e3, type: 3}
+  - {fileID: 8585974811015355561, guid: 56544cfc2265d5746bc37ecb9d83d1e3, type: 3}
+  - {fileID: -2796727066320189465, guid: 56544cfc2265d5746bc37ecb9d83d1e3, type: 3}

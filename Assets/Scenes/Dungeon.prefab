@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8621453579581831473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8627031151539552962}
+  - component: {fileID: 1022899243760387767}
+  - component: {fileID: 7829061708523982304}
+  - component: {fileID: 6019189189808111445}
+  - component: {fileID: 669498090108851315}
+  m_Layer: 0
+  m_Name: Dungeon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8627031151539552962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621453579581831473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2000, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1022899243760387767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621453579581831473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09df037046c95414b8431a6e1289ae4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
+  generateOnStart: 1
+  roomCount: 10
+  roomSize: {x: 20, y: 12}
+  seed: 0
+  useVariableRoomSizes: 1
+  smallRoomSize: {x: 16, y: 10}
+  largeRoomSize: {x: 28, y: 18}
+  player: {fileID: 0}
+  cameraFollow: {fileID: 0}
+  enemyPrefabs:
+  - {fileID: 4152020791366905440, guid: 340e8284bc39fca4c9b5ac825e158bdd, type: 3}
+  - {fileID: 8405586905713582779, guid: 5d93c069aee345b4ebefe212f01c9886, type: 3}
+  - {fileID: 4979247679133478016, guid: f501ba8cc1b12aa42b26f059ccfc36d1, type: 3}
+  - {fileID: 4099685004705891625, guid: afee178ed0d837b4e85e6df403be7d5e, type: 3}
+  - {fileID: 1642017655457138705, guid: 51da0556caa6fd9448cc3b88c42dca8b, type: 3}
+  bossPrefab: {fileID: 8664894876341164804, guid: 5deadc8d87b717d4eb72be53042a3d12, type: 3}
+  enemiesPerRoom: {x: 2, y: 5}
+  chestPrefab: {fileID: 5675448989888532469, guid: a06b8f19047219341aa6d73bb4d5cbb5, type: 3}
+  chestChanceInBattle: 0.25
+  eliteRoomChance: 0.25
+  ruinsRoomChance: 0.2
+  ambushRoomChance: 0.2
+  useDungeonTileArt: 1
+  generateObstacles: 1
+  generateTraps: 1
+  increaseDifficultyEachRun: 1
+  maxDifficultyLevel: 6
+  extraRoomsPerRun: 2
+  maxTotalRooms: 18
+  extraEnemiesPerRun: 1
+  depthStepsForExtraEnemy: 3
+  maxEnemiesPerRoom: 12
+  eliteChanceIncreasePerRun: 0.05
+  floorColor: {r: 0.18, g: 0.18, b: 0.22, a: 1}
+  wallColor: {r: 0.45, g: 0.45, b: 0.5, a: 1}
+  doorColor: {r: 0.65, g: 0.4, b: 0.2, a: 1}
+--- !u!114 &7829061708523982304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621453579581831473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c52021ca1af1c45b6c523929150ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room
+  gridPos: {x: 0, y: 0}
+  type: 0
+--- !u!114 &6019189189808111445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621453579581831473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627d8360600043444868de4ad1cde17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonBuffSpawner
+  treasureChance: 1
+  restChance: 0.75
+  eliteChance: 0.65
+  battleChance: 0.18
+  buffDuration: 35
+  localPickupPosition: {x: -2.5, y: -1.5}
+  buffSprites:
+  - {fileID: -4908605915849594817, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: 107646917, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: -73026854, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: 295256637, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: -1560897234, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: 386695658, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: 792417576, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+  - {fileID: -2091721085, guid: 8a68fc2413a59564a9220b96a847338b, type: 3}
+--- !u!114 &669498090108851315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8621453579581831473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2992e54a3b9c00f429d36af17d6d8a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonBalanceAndDetails
+  applyRecommendedBalance: 1
+  decorateRooms: 1
+  maxFloorDetailsPerRoom: 12
+  placeWallLamps: 1
+  markSpecialRooms: 1

@@ -59,5 +59,15 @@ public class MainMenu : MonoBehaviour
         // Tu neskôr prepojíte váš reálny zvukový systém (AudioSource / Mixer)
         Debug.Log($"Hlasitosť hudby zmenená na: {value}"); 
     }
+    public void QuitGame()
+{
+    Debug.Log("REFACTORY: Exiting game...");
+
+#if UNITY_EDITOR
+    UnityEditor.EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
+}
 }
 

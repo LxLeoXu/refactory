@@ -91,12 +91,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 717120040, guid: 6fa97ab635d2a8845b4ae23ecfcf826e, type: 3}
+  m_Sprite: {fileID: 4334783836991956000, guid: 73d6101f44b6b4640aee2459cb91b155, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -140,7 +140,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
@@ -251,10 +251,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TextureDirectionSwitcher
   directionalSprites:
-  - {fileID: -800245414, guid: b1cd2f22dc0c14a6c856d8a916d74dd4, type: 3}
-  - {fileID: -251822977, guid: b1cd2f22dc0c14a6c856d8a916d74dd4, type: 3}
-  - {fileID: -371433969, guid: b1cd2f22dc0c14a6c856d8a916d74dd4, type: 3}
-  - {fileID: 1919972064, guid: b1cd2f22dc0c14a6c856d8a916d74dd4, type: 3}
+  - {fileID: 4334783836991956000, guid: 45ac25ac1ddd29a439d8639867278f45, type: 3}
+  - {fileID: 7388399842426930641, guid: 45ac25ac1ddd29a439d8639867278f45, type: 3}
+  - {fileID: 730728372, guid: 45ac25ac1ddd29a439d8639867278f45, type: 3}
+  - {fileID: 717120040, guid: 45ac25ac1ddd29a439d8639867278f45, type: 3}
 --- !u!114 &7769974845908940357
 MonoBehaviour:
   m_ObjectHideFlags: 0

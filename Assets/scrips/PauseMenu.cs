@@ -1,62 +1,95 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-// 1. This line tells the script to use the New Input System
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
-    private bool isPaused = false;
+    [SerializeField] private string mainMenuSceneName = "MainMenu";
+    [SerializeField] private bool debugPauseInput = true;
+
+    private bool isPaused;
+
+    private void Awake()
+    {
+        if (canvasGroup == null)
+            canvasGroup = GetComponent<CanvasGroup>();
+    }
 
     private void Start()
     {
         ResumeGame();
+        if (canvasGroup == null)
+            Debug.LogError("PauseMenu: CanvasGroup nie je priradeny!", this);
     }
 
-    private void Update()
+ private void Update()
+{
+    // TEST: Stlačením M počas pauzy sa vráť do menu.
+    if (Keyboard.current != null &&
+        isPaused &&
+        Keyboard.current.mKey.wasPressedThisFrame)
     {
-        // 2. This is the correct way to detect the Escape key in the New Input System
-        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
-        {
-            if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }
+        QuitToMainMenu();
+        return;
     }
+
+    if (Keyboard.current == null ||
+        !Keyboard.current.escapeKey.wasPressedThisFrame)
+        return;
+
+    if (debugPauseInput)
+        Debug.Log("PauseMenu: ESC zachytene, isPaused=" + isPaused, this);
+
+    if (isPaused)
+        ResumeGame();
+    else
+        PauseGame();
+}
 
     public void PauseGame()
     {
+        if (canvasGroup == null)
+        {
+            Debug.LogError("PauseMenu: Pauza nezapnuta - chyba CanvasGroup.", this);
+            return;
+        }
+
         isPaused = true;
         SetMenuVisibility(true);
-        Time.timeScale = 0f; 
+        Time.timeScale = 0f;
+        if (debugPauseInput) Debug.Log("PauseMenu: hra pozastavena", this);
     }
 
     public void ResumeGame()
     {
         isPaused = false;
-        SetMenuVisibility(false);
-        Time.timeScale = 1f; 
-    }
-
-    public void QuitToMainMenu()
-    {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu"); 
+        SetMenuVisibility(false);
+        if (debugPauseInput) Debug.Log("PauseMenu: hra pokracuje", this);
     }
 
-    private void SetMenuVisibility(bool isVisible)
+public void QuitToMainMenu()
+{
+    Debug.Log("EXIT BUTTON CLICKED!");
+
+    Time.timeScale = 1f;
+    SceneManager.LoadScene("MainMenu");
+}  
+
+    private void SetMenuVisibility(bool visible)
     {
-        if (canvasGroup != null)
-        {
-            canvasGroup.alpha = isVisible ? 1f : 0f;
-            canvasGroup.interactable = isVisible;
-            canvasGroup.blocksRaycasts = isVisible;
-        }
+        if (canvasGroup == null) return;
+        canvasGroup.alpha = visible ? 1f : 0f;
+        canvasGroup.interactable = visible;
+        canvasGroup.blocksRaycasts = visible;
+    }
+
+    private void OnDisable()
+    {
+        if (!isPaused) return;
+        isPaused = false;
+        Time.timeScale = 1f;
     }
 }
 

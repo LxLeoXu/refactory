@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,12 +86,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8513860805877293909, guid: 7a61583ce3d719048a375b86e93c6a4c, type: 3}
+  m_Sprite: {fileID: -8513860805877293909, guid: 723b12ab20f43194082cd77fba006a20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -130,17 +130,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.012427226, y: -0.02278328}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.4, y: 0.6}
+  m_Size: {x: 0.43165037, y: 0.4565047}
   m_EdgeRadius: 0
 --- !u!50 &235689986703266618
 Rigidbody2D:
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteDirectionSwitcher
   directionalSprites:
-  - {fileID: -1536633473, guid: 66846e7b070e27d2a8220b8acf6d78e1, type: 3}
-  - {fileID: -253838701, guid: 66846e7b070e27d2a8220b8acf6d78e1, type: 3}
-  - {fileID: 1057247970, guid: 66846e7b070e27d2a8220b8acf6d78e1, type: 3}
-  - {fileID: 945265888, guid: 66846e7b070e27d2a8220b8acf6d78e1, type: 3}
+  - {fileID: -9176122009169712612, guid: 723b12ab20f43194082cd77fba006a20, type: 3}
+  - {fileID: 2514563993790797495, guid: 723b12ab20f43194082cd77fba006a20, type: 3}
+  - {fileID: -5607435026271281972, guid: 723b12ab20f43194082cd77fba006a20, type: 3}
+  - {fileID: -8513860805877293909, guid: 723b12ab20f43194082cd77fba006a20, type: 3}
