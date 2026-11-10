@@ -1,0 +1,8 @@
+[
+  "Assets/_Project/Scripts/Dungeon/DungeonBalanceAndDetails.cs",
+  "Assets/_Project/Scripts/Dungeon/DungeonGenerator.cs",
+  "Assets/_Project/Scripts/Dungeon/DungeonRoomExtras.cs",
+  "Assets/_Project/Scripts/Dungeon/LootChest.cs",
+  "Assets/_Project/Scripts/Factory/BaseRoomBuilder.cs",
+  "Assets/_Project/Scripts/Inventory/GameJamPickupVisual.cs"
+]

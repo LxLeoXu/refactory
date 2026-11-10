@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf130862c608684989ab95264007540, type: 3}
+  m_Name: DungeonContentProfile
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonContentProfile
+  enableTrapRooms: 1
+  enableMazeRooms: 1
+  trapWeight: 0.18
+  mazeWeight: 0.14
+  minimumMazeSize: {x: 26, y: 20}
+  mazeCellSize: 2.2
+  trapSafeTime: 1.5
+  trapWarningTime: 0.9
+  trapActiveTime: 1.1
+  trapDamage: 7
+  mazeWall: {fileID: 6842171781937889606, guid: f34650590b9a1244a89f7708d79c8d55, type: 3}
+  mazeTint: {r: 0.55, g: 0.75, b: 0.85, a: 1}
+  trapWarningColor: {r: 1, g: 0.75, b: 0.12, a: 1}

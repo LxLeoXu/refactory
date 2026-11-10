@@ -1,0 +1,32 @@
+Assets/scrips/GameJamFactory/Sprites
+Assets/Resources/GameJamBoss/Sprites
+Assets/Resources/GameJamEnemies/Sprites
+Assets/Resources/GeneratedBasePolish/Sprites
+Assets/Resources/GeneratedFactory/Sprites
+Assets/prefabs/GameJamExtras/Prefabs
+Assets/prefabs/GameJamExtras/Sprites
+Assets/GeneratedBasePolish/GameJamExtras 1/Sprites
+Assets/Assets/GameJamExtras/Sprites
+Assets/Assets/scripts/factory
+Assets/Assets/GameJamExtras
+Assets/Assets/scripts
+Assets/GeneratedBasePolish/GameJamExtras 1
+Assets/GeneratedBasePolish/Sprites
+Assets/prefabs/GameJamExtras
+Assets/Resources/GeneratedBasePolish
+Assets/Resources/GJPixelArt
+Assets/Resources/pixelartassets
+Assets/Resources/Sprites
+Assets/scrips/boss
+Assets/scrips/crafting
+Assets/scrips/factory
+Assets/scrips/GameJamFactory
+Assets/scrips/Player
+Assets/scrips/rougelike
+Assets/Assets
+Assets/GeneratedBasePolish
+Assets/pixelarts
+Assets/prefabs
+Assets/scrips
+Assets/Assets 1/Editor
+Assets/Assets 1

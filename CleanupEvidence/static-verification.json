@@ -1,0 +1,24 @@
+{
+  "movedAssets": 161,
+  "errors": [],
+  "changedMovedFileContents": [
+    "Assets/Editor/REFACTORYChestAudioSetup011.cs",
+    "Assets/Editor/GameJamFactorySetup.cs",
+    "Assets/Editor/GameJamStorageAnimationSetup.cs",
+    "Assets/_Project/Prefabs/Pickup_armor_plate.prefab",
+    "Assets/_Project/Prefabs/Pickup_armor_upgrade.prefab",
+    "Assets/_Project/Prefabs/Pickup_crystal.prefab",
+    "Assets/_Project/Prefabs/Pickup_health_potion.prefab",
+    "Assets/_Project/Prefabs/Pickup_iron.prefab",
+    "Assets/_Project/Prefabs/Pickup_metal_plate.prefab",
+    "Assets/_Project/Prefabs/Pickup_scrap.prefab",
+    "Assets/_Project/Prefabs/Pickup_weapon_upgrade.prefab",
+    "Assets/_Project/Prefabs/Pickup_wood.prefab"
+  ],
+  "finalMetaByteIdenticalCount": 159,
+  "unityNormalizedMetaFiles": [
+    "Assets/_Project/Art/Textures/demon_boss 1.png.meta",
+    "Assets/_Project/Art/Textures/Logo 1.png.meta"
+  ],
+  "normalization": "Unity appended default Android settings with overridden: 0; GUID, sprite slicing, IDs, pivot, PPU and filtering unchanged."
+}

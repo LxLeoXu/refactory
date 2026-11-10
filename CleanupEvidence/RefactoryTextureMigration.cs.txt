@@ -1,0 +1,72 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+[InitializeOnLoad]
+public static class RefactoryTextureMigration
+{
+    [Serializable] public class Move { public string from, to, key, guid; }
+    [Serializable] public class Plan { public Move[] moves; }
+    static RefactoryTextureMigration() { EditorApplication.delayCall += Run; }
+    static void Run()
+    {
+        if (!File.Exists("TextureMigration.request")) return;
+        if (EditorApplication.isCompiling || EditorApplication.isUpdating) { EditorApplication.delayCall += Run; return; }
+        File.Delete("TextureMigration.request");
+        try
+        {
+            if (EditorApplication.isPlayingOrWillChangePlaymode) throw new Exception("Exit Play Mode before migrating.");
+            for(int i=0;i<UnityEngine.SceneManagement.SceneManager.sceneCount;i++)
+                if(UnityEngine.SceneManagement.SceneManager.GetSceneAt(i).isDirty) throw new Exception("Save dirty scenes before migrating.");
+            var plan=JsonUtility.FromJson<Plan>(File.ReadAllText("TextureMoves.json"));
+            var entries=new List<RefactorySpriteCatalog.Entry>();
+            foreach(var m in plan.moves)
+            {
+                if(AssetDatabase.AssetPathToGUID(m.from)!=m.guid || File.Exists(m.to)) throw new Exception("Invalid move: "+m.from);
+                if(!string.IsNullOrEmpty(m.key))
+                {
+                    var sprite=Resources.Load<Sprite>(m.key);
+                    if(sprite==null || AssetDatabase.GetAssetPath(sprite)!=m.from) throw new Exception("Cannot resolve original sprite: "+m.key);
+                    entries.Add(new RefactorySpriteCatalog.Entry{key=m.key,sprite=sprite});
+                }
+            }
+            const string catalogPath="Assets/Resources/RefactorySpriteCatalog.asset";
+            if(File.Exists(catalogPath)) throw new Exception("Catalog already exists; migration refused.");
+            var catalog=ScriptableObject.CreateInstance<RefactorySpriteCatalog>(); catalog.entries=entries.ToArray();
+            AssetDatabase.CreateAsset(catalog,catalogPath); AssetDatabase.SaveAssets();
+            var moved=new List<Move>();
+            try
+            {
+                foreach(var m in plan.moves)
+                {
+                    string error=AssetDatabase.MoveAsset(m.from,m.to);
+                    if(!string.IsNullOrEmpty(error)) throw new Exception(error);
+                    moved.Add(m);
+                }
+            }
+            catch
+            {
+                foreach(var m in Enumerable.Reverse(moved))
+                {
+                    string error=AssetDatabase.MoveAsset(m.to,m.from);
+                    if(!string.IsNullOrEmpty(error)) Debug.LogError("Rollback failed: "+error);
+                }
+                AssetDatabase.DeleteAsset(catalogPath);
+                throw;
+            }
+            AssetDatabase.SaveAssets();
+            foreach(var entry in catalog.entries)
+                if(entry.sprite==null || RefactorySpriteCatalog.Load(entry.key)!=entry.sprite) throw new Exception("Catalog verification failed: "+entry.key);
+            foreach(var m in plan.moves)
+                if(AssetDatabase.AssetPathToGUID(m.to)!=m.guid) throw new Exception("GUID changed: "+m.to);
+            foreach(var dir in new[]{"Assets/Resources/DungeonTiles","Assets/Resources/ItemIcons","Assets/TextMesh Pro/Sprites"})
+                if(Directory.Exists(dir) && Directory.GetFileSystemEntries(dir).Length==0) AssetDatabase.DeleteAsset(dir);
+            File.WriteAllText("TextureMigration.result","PASS: moved "+moved.Count+" PNG files; verified "+entries.Count+" original sprite identities, catalog lookups and all moved GUIDs.");
+            RefactoryCleanupTools.Audit();
+        }
+        catch(Exception e) { File.WriteAllText("TextureMigration.result",e.ToString()); Debug.LogException(e); }
+    }
+}

@@ -1,0 +1,51 @@
+Validated 44 prefabs and 7 scenes. Compilation succeeded for this editor assembly.
+Unresolved GUID | Assets/Settings/Renderer2D.asset | e5c6678ed2aaa91408dd3df699057aae
+Unresolved GUID | Assets/Settings/Renderer2D.asset | 03cfc4915c15d504a9ed85ecc404e607
+Unresolved GUID | Assets/Settings/Renderer2D.asset | 53a11f4ebaebf4049b3638ef78dc9664
+Unresolved GUID | Assets/Settings/Renderer2D.asset | 8f96cd657dc40064aa21efcc7e50a2e7
+Unresolved GUID | Assets/Settings/Renderer2D.asset | 57d7c4c16e2765b47a4d2069b311bffe
+Unresolved GUID | Assets/Settings/Renderer2D.asset | 24ec0e140fb444a44ab96ee80844e18e
+Unresolved GUID | Assets/_Project/Prefabs/Dungeon.prefab | 340e8284bc39fca4c9b5ac825e158bdd
+Unresolved GUID | Assets/_Project/Prefabs/Dungeon.prefab | 5d93c069aee345b4ebefe212f01c9886
+Unresolved GUID | Assets/_Project/Prefabs/Dungeon.prefab | f501ba8cc1b12aa42b26f059ccfc36d1
+Unresolved GUID | Assets/_Project/Prefabs/Dungeon.prefab | a06b8f19047219341aa6d73bb4d5cbb5
+Missing object | Assets/_Project/Prefabs/Dungeon.prefab | Dungeon | DungeonGenerator.enemyPrefabs.Array.data[0]
+Missing object | Assets/_Project/Prefabs/Dungeon.prefab | Dungeon | DungeonGenerator.enemyPrefabs.Array.data[1]
+Missing object | Assets/_Project/Prefabs/Dungeon.prefab | Dungeon | DungeonGenerator.enemyPrefabs.Array.data[2]
+Missing object | Assets/_Project/Prefabs/Dungeon.prefab | Dungeon | DungeonGenerator.chestPrefab
+Unresolved GUID | Assets/_Project/Prefabs/Slime.prefab | 3eb6d84408471394d8d6f729571f86b8
+Missing object | Assets/_Project/Prefabs/Slime.prefab | Slime | EnemyLoot.pickupPrefab
+Unresolved GUID | Assets/_Project/Prefabs/tank2.prefab | 7a61583ce3d719048a375b86e93c6a4c
+Unresolved GUID | Assets/_Project/Prefabs/tank2.prefab | 66846e7b070e27d2a8220b8acf6d78e1
+Missing object | Assets/_Project/Prefabs/tank2.prefab | tank2 | SpriteRenderer.m_Sprite
+Missing object | Assets/_Project/Prefabs/tank2.prefab | tank2 | SpriteDirectionSwitcher.directionalSprites.Array.data[0]
+Missing object | Assets/_Project/Prefabs/tank2.prefab | tank2 | SpriteDirectionSwitcher.directionalSprites.Array.data[1]
+Missing object | Assets/_Project/Prefabs/tank2.prefab | tank2 | SpriteDirectionSwitcher.directionalSprites.Array.data[2]
+Missing object | Assets/_Project/Prefabs/tank2.prefab | tank2 | SpriteDirectionSwitcher.directionalSprites.Array.data[3]
+Unresolved GUID | Assets/Scenes/LevelScene.unity | f7d8dadf6b4b0824ab7135ac49ae1b62
+Missing object | Assets/Scenes/LevelScene.unity | BaseStorageChest | Transform.m_CorrespondingSourceObject
+Missing object | Assets/Scenes/LevelScene.unity | BaseStorageChest | SpriteRenderer.m_CorrespondingSourceObject
+Missing object | Assets/Scenes/LevelScene.unity | BaseStorageChest | BoxCollider2D.m_CorrespondingSourceObject
+Missing object | Assets/Scenes/LevelScene.unity | BaseStorageChest | BaseStorageChest.m_CorrespondingSourceObject
+Missing object | Assets/Scenes/LevelScene.unity | Slime | EnemyLoot.pickupPrefab
+Missing object | Assets/Scenes/SampleScene.unity | Slime | EnemyLoot.pickupPrefab
+Unresolved GUID | Assets/_Recovery/0.unity | 482c6f40f97c1694b96b210e7b22d116
+Missing object | Assets/_Recovery/0.unity | Dungeon | DungeonGenerator.enemyPrefabs.Array.data[0]
+Missing object | Assets/_Recovery/0.unity | Slime (Missing Prefab with guid: 482c6f40f97c1694b96b210e7b22d116) | Transform.m_CorrespondingSourceObject
+Unresolved GUID | Assets/Scenes/test.unity | f7d8dadf6b4b0824ab7135ac49ae1b62
+Unresolved GUID | Assets/Scenes/test.unity | 0c13aa492f70a854d9bb024e3c2ba5cd
+Unresolved GUID | Assets/Scenes/test.unity | b1cd2f22dc0c14a6c856d8a916d74dd4
+Missing object | Assets/Scenes/test.unity | Dungeon | DungeonGenerator.enemyPrefabs.Array.data[0]
+Missing object | Assets/Scenes/test.unity | Dungeon | DungeonGenerator.enemyPrefabs.Array.data[1]
+Missing object | Assets/Scenes/test.unity | Dungeon | DungeonGenerator.enemyPrefabs.Array.data[2]
+Missing object | Assets/Scenes/test.unity | Dungeon | DungeonGenerator.chestPrefab
+Missing object | Assets/Scenes/test.unity | Slime | EnemyLoot.pickupPrefab
+Missing object | Assets/Scenes/test.unity | BaseStorageChest (Missing Prefab with guid: f7d8dadf6b4b0824ab7135ac49ae1b62) | Transform.m_CorrespondingSourceObject
+Missing scripts | Assets/Scenes/test.unity | player | 1
+Missing object | Assets/Scenes/test.unity | npc | SpriteRenderer.m_Sprite
+Unresolved GUID | Assets/_Recovery/0 (1).unity | f7d8dadf6b4b0824ab7135ac49ae1b62
+Missing object | Assets/_Recovery/0 (1).unity | BaseStorageChest | Transform.m_CorrespondingSourceObject
+Missing object | Assets/_Recovery/0 (1).unity | BaseStorageChest | SpriteRenderer.m_CorrespondingSourceObject
+Missing object | Assets/_Recovery/0 (1).unity | BaseStorageChest | BoxCollider2D.m_CorrespondingSourceObject
+Missing object | Assets/_Recovery/0 (1).unity | BaseStorageChest | BaseStorageChest.m_CorrespondingSourceObject
+Missing object | Assets/_Recovery/0 (1).unity | Slime | EnemyLoot.pickupPrefab

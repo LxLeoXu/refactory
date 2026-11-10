@@ -1,0 +1,648 @@
+{
+  "moves": [
+    {
+      "from": "Assets/Assets/GameJamExtras/Sprites/Gear.png",
+      "to": "Assets/_Project/Art/Textures/Gear.png"
+    },
+    {
+      "from": "Assets/Assets/GameJamExtras/Sprites/Steam.png",
+      "to": "Assets/_Project/Art/Textures/Steam.png"
+    },
+    {
+      "from": "Assets/Assets/GameJamExtras/Sprites/Storage_Chest.png",
+      "to": "Assets/_Project/Art/Textures/Storage_Chest.png"
+    },
+    {
+      "from": "Assets/Assets/GameJamExtras/Sprites/WorkGlow.png",
+      "to": "Assets/_Project/Art/Textures/WorkGlow.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/GameJamExtras 1/Sprites/Gear.png",
+      "to": "Assets/_Project/Art/Textures/Gear_cb81c5e7.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/GameJamExtras 1/Sprites/Steam.png",
+      "to": "Assets/_Project/Art/Textures/Steam_858d1e96.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/GameJamExtras 1/Sprites/Storage_Chest.png",
+      "to": "Assets/_Project/Art/Textures/Storage_Chest_48197dbf.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/GameJamExtras 1/Sprites/WorkGlow.png",
+      "to": "Assets/_Project/Art/Textures/WorkGlow_03ee5b24.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/Sprites/amber_lamp.png",
+      "to": "Assets/_Project/Art/Textures/amber_lamp.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/Sprites/factory_crate.png",
+      "to": "Assets/_Project/Art/Textures/factory_crate.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/Sprites/factory_floor.png",
+      "to": "Assets/_Project/Art/Textures/factory_floor.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/Sprites/machine_pad.png",
+      "to": "Assets/_Project/Art/Textures/machine_pad.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/Sprites/walkway.png",
+      "to": "Assets/_Project/Art/Textures/walkway.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/Sprites/wall_terminal.png",
+      "to": "Assets/_Project/Art/Textures/wall_terminal.png"
+    },
+    {
+      "from": "Assets/GeneratedBasePolish/Sprites/warning_stripes.png",
+      "to": "Assets/_Project/Art/Textures/warning_stripes.png"
+    },
+    {
+      "from": "Assets/pixelarts/arrow.png",
+      "to": "Assets/_Project/Art/Textures/arrow.png"
+    },
+    {
+      "from": "Assets/pixelarts/demon_boss 1.png",
+      "to": "Assets/_Project/Art/Textures/demon_boss 1.png"
+    },
+    {
+      "from": "Assets/pixelarts/Logo 1.png",
+      "to": "Assets/_Project/Art/Textures/Logo 1.png"
+    },
+    {
+      "from": "Assets/pixelarts/monster.png",
+      "to": "Assets/_Project/Art/Textures/monster.png"
+    },
+    {
+      "from": "Assets/pixelarts/player.png",
+      "to": "Assets/_Project/Art/Textures/player.png"
+    },
+    {
+      "from": "Assets/pixelarts/slime.png",
+      "to": "Assets/_Project/Art/Textures/slime.png"
+    },
+    {
+      "from": "Assets/pixelarts/tank.png",
+      "to": "Assets/_Project/Art/Textures/tank.png"
+    },
+    {
+      "from": "Assets/scrips/GameJamFactory/Sprites/Machine_ArmorPress.png",
+      "to": "Assets/_Project/Art/Textures/Machine_ArmorPress.png"
+    },
+    {
+      "from": "Assets/scrips/GameJamFactory/Sprites/Machine_Assembler.png",
+      "to": "Assets/_Project/Art/Textures/Machine_Assembler.png"
+    },
+    {
+      "from": "Assets/scrips/GameJamFactory/Sprites/Machine_Furnace.png",
+      "to": "Assets/_Project/Art/Textures/Machine_Furnace.png"
+    },
+    {
+      "from": "Assets/scrips/GameJamFactory/Sprites/Machine_StatusLamp.png",
+      "to": "Assets/_Project/Art/Textures/Machine_StatusLamp.png"
+    },
+    {
+      "from": "Assets/scrips/GameJamFactory/Sprites/Machine_UpgradeStation.png",
+      "to": "Assets/_Project/Art/Textures/Machine_UpgradeStation.png"
+    },
+    {
+      "from": "Assets/Resources/GameJamBoss/Sprites/forge_heart.png",
+      "to": "Assets/_Project/Art/Textures/forge_heart.png"
+    },
+    {
+      "from": "Assets/Resources/GameJamEnemies/Sprites/crystal_wisp.png",
+      "to": "Assets/_Project/Art/Textures/crystal_wisp.png"
+    },
+    {
+      "from": "Assets/Resources/GameJamEnemies/Sprites/mine_spider.png",
+      "to": "Assets/_Project/Art/Textures/mine_spider.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedBasePolish/Sprites/amber_lamp.png",
+      "to": "Assets/_Project/Art/Textures/amber_lamp_6db55d42.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedBasePolish/Sprites/factory_crate.png",
+      "to": "Assets/_Project/Art/Textures/factory_crate_b4481863.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedBasePolish/Sprites/machine_pad.png",
+      "to": "Assets/_Project/Art/Textures/machine_pad_f11915f7.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedBasePolish/Sprites/walkway.png",
+      "to": "Assets/_Project/Art/Textures/walkway_e9bd996a.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedBasePolish/Sprites/wall_terminal.png",
+      "to": "Assets/_Project/Art/Textures/wall_terminal_36551952.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedBasePolish/Sprites/warning_stripes.png",
+      "to": "Assets/_Project/Art/Textures/warning_stripes_913ed74f.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedFactory/Sprites/Machine_ArmorPress.png",
+      "to": "Assets/_Project/Art/Textures/Machine_ArmorPress_054390c3.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedFactory/Sprites/Machine_Assembler.png",
+      "to": "Assets/_Project/Art/Textures/Machine_Assembler_c08d886d.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedFactory/Sprites/Machine_Furnace.png",
+      "to": "Assets/_Project/Art/Textures/Machine_Furnace_bcbb6861.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedFactory/Sprites/Machine_StatusLamp.png",
+      "to": "Assets/_Project/Art/Textures/Machine_StatusLamp_f583de8f.png"
+    },
+    {
+      "from": "Assets/Resources/GeneratedFactory/Sprites/Machine_UpgradeStation.png",
+      "to": "Assets/_Project/Art/Textures/Machine_UpgradeStation_a0751009.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/crystal_rifle.png",
+      "to": "Assets/_Project/Art/Textures/crystal_rifle.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/forge_heart_idle.png",
+      "to": "Assets/_Project/Art/Textures/forge_heart_idle.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/forge_heart_phase2.png",
+      "to": "Assets/_Project/Art/Textures/forge_heart_phase2.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/furnace_cannon.png",
+      "to": "Assets/_Project/Art/Textures/furnace_cannon.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/item_armor_upgrade.png",
+      "to": "Assets/_Project/Art/Textures/item_armor_upgrade.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/item_crystal.png",
+      "to": "Assets/_Project/Art/Textures/item_crystal.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/item_iron.png",
+      "to": "Assets/_Project/Art/Textures/item_iron.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/item_potion.png",
+      "to": "Assets/_Project/Art/Textures/item_potion.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/item_scrap.png",
+      "to": "Assets/_Project/Art/Textures/item_scrap.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/item_weapon_upgrade.png",
+      "to": "Assets/_Project/Art/Textures/item_weapon_upgrade.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/prop_barrel.png",
+      "to": "Assets/_Project/Art/Textures/prop_barrel.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/prop_crate.png",
+      "to": "Assets/_Project/Art/Textures/prop_crate.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/prop_crystal.png",
+      "to": "Assets/_Project/Art/Textures/prop_crystal.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/scrap_shotgun.png",
+      "to": "Assets/_Project/Art/Textures/scrap_shotgun.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/turret_bullet.png",
+      "to": "Assets/_Project/Art/Textures/turret_bullet.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/turret_fire.png",
+      "to": "Assets/_Project/Art/Textures/turret_fire.png"
+    },
+    {
+      "from": "Assets/Resources/GJPixelArt/turret_idle.png",
+      "to": "Assets/_Project/Art/Textures/turret_idle.png"
+    },
+    {
+      "from": "Assets/Resources/pixelartassets/arrow.png",
+      "to": "Assets/_Project/Art/Textures/arrow_d391ee40.png"
+    },
+    {
+      "from": "Assets/Resources/pixelartassets/demon_boss.png",
+      "to": "Assets/_Project/Art/Textures/demon_boss.png"
+    },
+    {
+      "from": "Assets/Resources/pixelartassets/monster.png",
+      "to": "Assets/_Project/Art/Textures/monster_7cbe743a.png"
+    },
+    {
+      "from": "Assets/Resources/pixelartassets/player.png",
+      "to": "Assets/_Project/Art/Textures/player_73d6101f.png"
+    },
+    {
+      "from": "Assets/Resources/pixelartassets/slime.png",
+      "to": "Assets/_Project/Art/Textures/slime_d1048a75.png"
+    },
+    {
+      "from": "Assets/Resources/pixelartassets/tank.png",
+      "to": "Assets/_Project/Art/Textures/tank_d6dda338.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/amber_lamp.png",
+      "to": "Assets/_Project/Art/Textures/amber_lamp_6a833bce.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/chest_closed.png",
+      "to": "Assets/_Project/Art/Textures/chest_closed.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/chest_open.png",
+      "to": "Assets/_Project/Art/Textures/chest_open.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/factory_crate.png",
+      "to": "Assets/_Project/Art/Textures/factory_crate_5f67151a.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/factory_floor.png",
+      "to": "Assets/_Project/Art/Textures/factory_floor_fa345c22.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/forge_heart.png",
+      "to": "Assets/_Project/Art/Textures/forge_heart_476fde9e.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/Gear.png",
+      "to": "Assets/_Project/Art/Textures/Gear_b6b26e9e.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/machine_pad.png",
+      "to": "Assets/_Project/Art/Textures/machine_pad_d71d74d3.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/Neon Pixel Power-Up Icon Sheet.png",
+      "to": "Assets/_Project/Art/Textures/Neon Pixel Power-Up Icon Sheet.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/Pixel Potion Upgrade Collection.png",
+      "to": "Assets/_Project/Art/Textures/Pixel Potion Upgrade Collection.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/Steam.png",
+      "to": "Assets/_Project/Art/Textures/Steam_4630b149.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/Storage_Chest.png",
+      "to": "Assets/_Project/Art/Textures/Storage_Chest_bc4af93c.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/walkway.png",
+      "to": "Assets/_Project/Art/Textures/walkway_7b5a72a4.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/wall_stone.png",
+      "to": "Assets/_Project/Art/Textures/wall_stone.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/wall_terminal.png",
+      "to": "Assets/_Project/Art/Textures/wall_terminal_db6517fe.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/warning_stripes.png",
+      "to": "Assets/_Project/Art/Textures/warning_stripes_8a31ba4a.png"
+    },
+    {
+      "from": "Assets/Resources/Sprites/WorkGlow.png",
+      "to": "Assets/_Project/Art/Textures/WorkGlow_cd895fa3.png"
+    },
+    {
+      "from": "Assets/Assets 1/Editor/REFACTORYPauseUIFix.cs",
+      "to": "Assets/Editor/REFACTORYPauseUIFix.cs"
+    },
+    {
+      "from": "Assets/MainMenuControlsPanel.cs",
+      "to": "Assets/_Project/Scripts/UI/MainMenuControlsPanel.cs"
+    },
+    {
+      "from": "Assets/REFACTORYChestAudioSetup011.cs",
+      "to": "Assets/Editor/REFACTORYChestAudioSetup011.cs"
+    },
+    {
+      "from": "Assets/scrips/BaseStorageChest.cs",
+      "to": "Assets/_Project/Scripts/Inventory/BaseStorageChest.cs"
+    },
+    {
+      "from": "Assets/scrips/boss/GJForgeHeartBoss.cs",
+      "to": "Assets/_Project/Scripts/Enemies/GJForgeHeartBoss.cs"
+    },
+    {
+      "from": "Assets/scrips/boss/GJForgeHeartBullet.cs",
+      "to": "Assets/_Project/Scripts/Enemies/GJForgeHeartBullet.cs"
+    },
+    {
+      "from": "Assets/scrips/boss/GJGameMusic.cs",
+      "to": "Assets/_Project/Scripts/Audio/GJGameMusic.cs"
+    },
+    {
+      "from": "Assets/scrips/boss/GJRandomBossSelector.cs",
+      "to": "Assets/_Project/Scripts/Enemies/GJRandomBossSelector.cs"
+    },
+    {
+      "from": "Assets/scrips/crafting/CraftingSystem.cs",
+      "to": "Assets/_Project/Scripts/Crafting/CraftingSystem.cs"
+    },
+    {
+      "from": "Assets/scrips/crafting/CraftingUI.cs",
+      "to": "Assets/_Project/Scripts/UI/CraftingUI.cs"
+    },
+    {
+      "from": "Assets/scrips/crafting/GJFieldTurret.cs",
+      "to": "Assets/_Project/Scripts/Crafting/GJFieldTurret.cs"
+    },
+    {
+      "from": "Assets/scrips/crafting/GJFieldTurretBullet.cs",
+      "to": "Assets/_Project/Scripts/Crafting/GJFieldTurretBullet.cs"
+    },
+    {
+      "from": "Assets/scrips/crafting/GJFieldTurretDeployer.cs",
+      "to": "Assets/_Project/Scripts/Crafting/GJFieldTurretDeployer.cs"
+    },
+    {
+      "from": "Assets/scrips/DungeonBuffPickup.cs",
+      "to": "Assets/_Project/Scripts/Inventory/DungeonBuffPickup.cs"
+    },
+    {
+      "from": "Assets/scrips/DungeonBuffSpawner.cs",
+      "to": "Assets/_Project/Scripts/Dungeon/DungeonBuffSpawner.cs"
+    },
+    {
+      "from": "Assets/scrips/factory/BaseRoomBuilder.cs",
+      "to": "Assets/_Project/Scripts/Factory/BaseRoomBuilder.cs"
+    },
+    {
+      "from": "Assets/scrips/factory/FactoryMachine.cs",
+      "to": "Assets/_Project/Scripts/Factory/FactoryMachine.cs"
+    },
+    {
+      "from": "Assets/scrips/factory/FactoryMachineLight.cs",
+      "to": "Assets/_Project/Scripts/Factory/FactoryMachineLight.cs"
+    },
+    {
+      "from": "Assets/scrips/FactoryMachineAnimator.cs",
+      "to": "Assets/_Project/Scripts/Factory/FactoryMachineAnimator.cs"
+    },
+    {
+      "from": "Assets/scrips/FoodPickup.cs",
+      "to": "Assets/_Project/Scripts/Inventory/FoodPickup.cs"
+    },
+    {
+      "from": "Assets/scrips/GameJamFactorySetup.cs",
+      "to": "Assets/Editor/GameJamFactorySetup.cs"
+    },
+    {
+      "from": "Assets/scrips/GameJamPickupVisual.cs",
+      "to": "Assets/_Project/Scripts/Inventory/GameJamPickupVisual.cs"
+    },
+    {
+      "from": "Assets/scrips/GameJamStorageAnimationSetup.cs",
+      "to": "Assets/Editor/GameJamStorageAnimationSetup.cs"
+    },
+    {
+      "from": "Assets/scrips/IDamageable.cs",
+      "to": "Assets/_Project/Scripts/Player/IDamageable.cs"
+    },
+    {
+      "from": "Assets/scrips/InnerSelfNPC.cs",
+      "to": "Assets/_Project/Scripts/Core/InnerSelfNPC.cs"
+    },
+    {
+      "from": "Assets/scrips/MainMenu.cs",
+      "to": "Assets/_Project/Scripts/UI/MainMenu.cs"
+    },
+    {
+      "from": "Assets/scrips/PauseMenu.cs",
+      "to": "Assets/_Project/Scripts/UI/PauseMenu.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/CameraFollow.cs",
+      "to": "Assets/_Project/Scripts/Player/CameraFollow.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/DungeonBalanceAndDetails.cs",
+      "to": "Assets/_Project/Scripts/Dungeon/DungeonBalanceAndDetails.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/HUD.cs",
+      "to": "Assets/_Project/Scripts/UI/HUD.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/Inventory1.cs",
+      "to": "Assets/_Project/Scripts/Inventory/Inventory1.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/ItemDatabase.cs",
+      "to": "Assets/_Project/Scripts/Inventory/ItemDatabase.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/ItemPickup.cs",
+      "to": "Assets/_Project/Scripts/Inventory/ItemPickup.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/LootChest.cs",
+      "to": "Assets/_Project/Scripts/Dungeon/LootChest.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/PlayerController.cs",
+      "to": "Assets/_Project/Scripts/Player/PlayerController.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/PlayerHUD.cs",
+      "to": "Assets/_Project/Scripts/UI/PlayerHUD.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/PlayerItemUse.cs",
+      "to": "Assets/_Project/Scripts/Inventory/PlayerItemUse.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/PlayerStats.cs",
+      "to": "Assets/_Project/Scripts/Player/PlayerStats.cs"
+    },
+    {
+      "from": "Assets/scrips/Player/Projectile.cs",
+      "to": "Assets/_Project/Scripts/Player/Projectile.cs"
+    },
+    {
+      "from": "Assets/scrips/PlayerBuffs.cs",
+      "to": "Assets/_Project/Scripts/Player/PlayerBuffs.cs"
+    },
+    {
+      "from": "Assets/scrips/RefactoryPauseMenuV2.cs",
+      "to": "Assets/_Project/Scripts/UI/RefactoryPauseMenuV2.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/DungeonGenerator.cs",
+      "to": "Assets/_Project/Scripts/Dungeon/DungeonGenerator.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/DungeonRoomExtras.cs",
+      "to": "Assets/_Project/Scripts/Dungeon/DungeonRoomExtras.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/DungeonSpikeTrap.cs",
+      "to": "Assets/_Project/Scripts/Dungeon/DungeonSpikeTrap.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/Enemy.cs",
+      "to": "Assets/_Project/Scripts/Enemies/Enemy.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/EnemyBullet.cs",
+      "to": "Assets/_Project/Scripts/Enemies/EnemyBullet.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/EnemyDirectionalSprite.cs",
+      "to": "Assets/_Project/Scripts/Enemies/EnemyDirectionalSprite.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/EnemyLoot.cs",
+      "to": "Assets/_Project/Scripts/Enemies/EnemyLoot.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/FactoryWeaponForge.cs",
+      "to": "Assets/_Project/Scripts/Crafting/FactoryWeaponForge.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/FactoryWeaponHit.cs",
+      "to": "Assets/_Project/Scripts/Crafting/FactoryWeaponHit.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/FactoryWeapons.cs",
+      "to": "Assets/_Project/Scripts/Crafting/FactoryWeapons.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/GJCrystalWispAttack.cs",
+      "to": "Assets/_Project/Scripts/Enemies/GJCrystalWispAttack.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/GJCrystalWispBolt.cs",
+      "to": "Assets/_Project/Scripts/Enemies/GJCrystalWispBolt.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/GJMineSpiderAttack.cs",
+      "to": "Assets/_Project/Scripts/Enemies/GJMineSpiderAttack.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/GJSpiderMine.cs",
+      "to": "Assets/_Project/Scripts/Enemies/GJSpiderMine.cs"
+    },
+    {
+      "from": "Assets/scrips/rougelike/Room.cs",
+      "to": "Assets/_Project/Scripts/Dungeon/Room.cs"
+    },
+    {
+      "from": "Assets/scrips/RunManager.cs",
+      "to": "Assets/_Project/Scripts/Core/RunManager.cs"
+    },
+    {
+      "from": "Assets/scrips/TextureDirectionSwitcher.cs",
+      "to": "Assets/_Project/Scripts/Core/TextureDirectionSwitcher.cs"
+    },
+    {
+      "from": "Assets/prefabs/Chest.prefab",
+      "to": "Assets/_Project/Prefabs/Chest.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Enemy_Boss.prefab",
+      "to": "Assets/_Project/Prefabs/Enemy_Boss.prefab"
+    },
+    {
+      "from": "Assets/prefabs/GameJamExtras/Prefabs/BaseStorageChest.prefab",
+      "to": "Assets/_Project/Prefabs/BaseStorageChest.prefab"
+    },
+    {
+      "from": "Assets/prefabs/iron.prefab",
+      "to": "Assets/_Project/Prefabs/iron.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Pickup_armor_plate.prefab",
+      "to": "Assets/_Project/Prefabs/Pickup_armor_plate.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Pickup_armor_upgrade.prefab",
+      "to": "Assets/_Project/Prefabs/Pickup_armor_upgrade.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Pickup_crystal.prefab",
+      "to": "Assets/_Project/Prefabs/Pickup_crystal.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Pickup_health_potion.prefab",
+      "to": "Assets/_Project/Prefabs/Pickup_health_potion.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Pickup_iron.prefab",
+      "to": "Assets/_Project/Prefabs/Pickup_iron.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Pickup_metal_plate.prefab",
+      "to": "Assets/_Project/Prefabs/Pickup_metal_plate.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Pickup_scrap.prefab",
+      "to": "Assets/_Project/Prefabs/Pickup_scrap.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Pickup_weapon_part.prefab",
+      "to": "Assets/_Project/Prefabs/Pickup_weapon_part.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Pickup_weapon_upgrade.prefab",
+      "to": "Assets/_Project/Prefabs/Pickup_weapon_upgrade.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Pickup_wood.prefab",
+      "to": "Assets/_Project/Prefabs/Pickup_wood.prefab"
+    },
+    {
+      "from": "Assets/prefabs/player.prefab",
+      "to": "Assets/_Project/Prefabs/player.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Projectile.prefab",
+      "to": "Assets/_Project/Prefabs/Projectile.prefab"
+    },
+    {
+      "from": "Assets/prefabs/runner.prefab",
+      "to": "Assets/_Project/Prefabs/runner.prefab"
+    },
+    {
+      "from": "Assets/prefabs/Slime.prefab",
+      "to": "Assets/_Project/Prefabs/Slime.prefab"
+    },
+    {
+      "from": "Assets/prefabs/tank.prefab",
+      "to": "Assets/_Project/Prefabs/tank.prefab"
+    },
+    {
+      "from": "Assets/prefabs/tank2.prefab",
+      "to": "Assets/_Project/Prefabs/tank2.prefab"
+    },
+    {
+      "from": "Assets/prefabs/wood.prefab",
+      "to": "Assets/_Project/Prefabs/wood.prefab"
+    },
+    {
+      "from": "Assets/Scenes/Dungeon.prefab",
+      "to": "Assets/_Project/Prefabs/Dungeon.prefab"
+    }
+  ]
+}

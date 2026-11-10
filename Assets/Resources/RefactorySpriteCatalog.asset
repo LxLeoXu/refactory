@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2364c3499b3ab3945ac3b8fd5a193ae6, type: 3}
+  m_Name: RefactorySpriteCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::RefactorySpriteCatalog
+  entries:
+  - key: DungeonTiles/background_void
+    sprite: {fileID: 21300000, guid: 3537bd31d35a64c44bcb8551aa741a27, type: 3}
+  - key: DungeonTiles/chest_closed
+    sprite: {fileID: 21300000, guid: 86b9f3513e8629b4db0116bde77ddcc9, type: 3}
+  - key: DungeonTiles/chest_open
+    sprite: {fileID: 21300000, guid: f134034b3dbc5c048b6804f73e966b3f, type: 3}
+  - key: DungeonTiles/door_wood
+    sprite: {fileID: 21300000, guid: 8550868d6bea77246aaf2c3500346044, type: 3}
+  - key: DungeonTiles/factory_floor
+    sprite: {fileID: 21300000, guid: fd21a7a6322eff34d93f642ce76184bc, type: 3}
+  - key: DungeonTiles/floor_ambush
+    sprite: {fileID: 21300000, guid: f3c2ecb58c3ee9b4f9f7859e40f8c34c, type: 3}
+  - key: DungeonTiles/floor_danger
+    sprite: {fileID: 21300000, guid: 05ea34426ec8fa244a1219bac9359dd3, type: 3}
+  - key: DungeonTiles/floor_moss
+    sprite: {fileID: 21300000, guid: dd3609d0ae4c70544ace9201285d63fe, type: 3}
+  - key: DungeonTiles/floor_ruins
+    sprite: {fileID: 21300000, guid: 733a472e9a500d547ae89b41be4d38ab, type: 3}
+  - key: DungeonTiles/floor_stone
+    sprite: {fileID: 21300000, guid: fe5340e8464cde9459f7d71c94b69498, type: 3}
+  - key: DungeonTiles/floor_supply
+    sprite: {fileID: 21300000, guid: e523838202819c64c81d48c3eb2e9435, type: 3}
+  - key: DungeonTiles/floor_treasure
+    sprite: {fileID: 21300000, guid: e88c5f715b607664a81cbcaacefb73a9, type: 3}
+  - key: DungeonTiles/prop_crate
+    sprite: {fileID: 21300000, guid: a04af61de8291ef4eb6df205e35b8b24, type: 3}
+  - key: DungeonTiles/prop_lamp
+    sprite: {fileID: 21300000, guid: 137bcae06ac369840a858f684fa048a4, type: 3}
+  - key: DungeonTiles/prop_pillar
+    sprite: {fileID: 21300000, guid: 44793ef0128e8004bb0a003fd6d22779, type: 3}
+  - key: DungeonTiles/trap_spikes
+    sprite: {fileID: 21300000, guid: 79f5787dec9ad994d8c537cfebd6174f, type: 3}
+  - key: DungeonTiles/wall_stone
+    sprite: {fileID: 6842171781937889606, guid: f34650590b9a1244a89f7708d79c8d55, type: 3}
+  - key: ItemIcons/armor_plate
+    sprite: {fileID: 21300000, guid: a620dde5bf1806749913402726209764, type: 3}
+  - key: ItemIcons/armor_upgrade
+    sprite: {fileID: 21300000, guid: d9621cdc627c1a24088bb1ef3a05ab5b, type: 3}
+  - key: ItemIcons/crystal
+    sprite: {fileID: 21300000, guid: 3709bbc06d707954287630bc4d391ae3, type: 3}
+  - key: ItemIcons/health_potion
+    sprite: {fileID: 21300000, guid: b87feadf62ca4f445aee687cb574be1d, type: 3}
+  - key: ItemIcons/iron
+    sprite: {fileID: 21300000, guid: 5bd02c30493546449816be9fb8807332, type: 3}
+  - key: ItemIcons/metal_plate
+    sprite: {fileID: 21300000, guid: 8b8b50caab80a45428512c67d3dd30fc, type: 3}
+  - key: ItemIcons/scrap
+    sprite: {fileID: 21300000, guid: 5329af4c5f27fa84f912278bd7798f20, type: 3}
+  - key: ItemIcons/weapon_part
+    sprite: {fileID: 21300000, guid: e62a2095c6252744b83a13965ef412ee, type: 3}
+  - key: ItemIcons/weapon_upgrade
+    sprite: {fileID: 21300000, guid: c2c1178d5905b8748b446ebb7bfab737, type: 3}
+  - key: ItemIcons/wood
+    sprite: {fileID: 21300000, guid: c6caf580a27bdd340b6fec1dd8c40386, type: 3}

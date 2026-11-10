@@ -1,0 +1,6 @@
+PASS
+500 graph cases: exact count, repeatability, connectivity, deepest boss, no cycles.
+300 maze cases: all portals, reward and all passages reachable.
+Trap phases: safe, warning, active, reset.
+Actual 10-room generation and regeneration: guaranteed trap/maze, matching collider grid, player clearance, aligned doors, unchanged RNG state.
+Factory profile: stable slot IDs, artwork, perimeter and central aisle clearance.

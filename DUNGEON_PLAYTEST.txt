@@ -1,0 +1,2 @@
+System.Exception: Trap did not complete safe/warning/damage sequence
+  at DungeonPlayProbe.Tick () [0x003ea] in C:\Users\homol\LxLeoXu\refactory\Assets\Editor\DungeonPlayProbe.cs:70 

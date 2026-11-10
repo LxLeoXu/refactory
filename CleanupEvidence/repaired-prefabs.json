@@ -1,0 +1,15 @@
+[
+  "Assets/_Project/Prefabs/Pickup_armor_plate.prefab",
+  "Assets/_Project/Prefabs/Pickup_armor_upgrade.prefab",
+  "Assets/_Project/Prefabs/Pickup_crystal.prefab",
+  "Assets/_Project/Prefabs/Pickup_health_potion.prefab",
+  "Assets/_Project/Prefabs/Pickup_iron.prefab",
+  "Assets/_Project/Prefabs/Pickup_metal_plate.prefab",
+  "Assets/_Project/Prefabs/Pickup_scrap.prefab",
+  "Assets/_Project/Prefabs/Pickup_weapon_upgrade.prefab",
+  "Assets/_Project/Prefabs/Pickup_wood.prefab",
+  "Assets/Resources/GeneratedFactory/Prefabs/Factory_ArmorPress.prefab",
+  "Assets/Resources/GeneratedFactory/Prefabs/Factory_Assembler.prefab",
+  "Assets/Resources/GeneratedFactory/Prefabs/Factory_Furnace.prefab",
+  "Assets/Resources/GeneratedFactory/Prefabs/Factory_UpgradeStation.prefab"
+]

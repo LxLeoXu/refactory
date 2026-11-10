@@ -1,0 +1,1 @@
+PASS: moved 28 PNG files; verified 27 original sprite identities, catalog lookups and all moved GUIDs.

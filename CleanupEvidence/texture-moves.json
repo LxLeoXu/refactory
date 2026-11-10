@@ -1,0 +1,172 @@
+{
+  "moves": [
+    {
+      "from": "Assets/TextMesh Pro/Sprites/EmojiOne.png",
+      "to": "Assets/_Project/Art/Textures/EmojiOne.png",
+      "key": "",
+      "guid": "dffef66376be4fa480fb02b19edbe903"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/background_void.png",
+      "to": "Assets/_Project/Art/Textures/background_void.png",
+      "key": "DungeonTiles/background_void",
+      "guid": "3537bd31d35a64c44bcb8551aa741a27"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/chest_closed.png",
+      "to": "Assets/_Project/Art/Textures/chest_closed_86b9f351.png",
+      "key": "DungeonTiles/chest_closed",
+      "guid": "86b9f3513e8629b4db0116bde77ddcc9"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/chest_open.png",
+      "to": "Assets/_Project/Art/Textures/chest_open_f134034b.png",
+      "key": "DungeonTiles/chest_open",
+      "guid": "f134034b3dbc5c048b6804f73e966b3f"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/door_wood.png",
+      "to": "Assets/_Project/Art/Textures/door_wood.png",
+      "key": "DungeonTiles/door_wood",
+      "guid": "8550868d6bea77246aaf2c3500346044"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/factory_floor.png",
+      "to": "Assets/_Project/Art/Textures/factory_floor_fd21a7a6.png",
+      "key": "DungeonTiles/factory_floor",
+      "guid": "fd21a7a6322eff34d93f642ce76184bc"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/floor_ambush.png",
+      "to": "Assets/_Project/Art/Textures/floor_ambush.png",
+      "key": "DungeonTiles/floor_ambush",
+      "guid": "f3c2ecb58c3ee9b4f9f7859e40f8c34c"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/floor_danger.png",
+      "to": "Assets/_Project/Art/Textures/floor_danger.png",
+      "key": "DungeonTiles/floor_danger",
+      "guid": "05ea34426ec8fa244a1219bac9359dd3"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/floor_moss.png",
+      "to": "Assets/_Project/Art/Textures/floor_moss.png",
+      "key": "DungeonTiles/floor_moss",
+      "guid": "dd3609d0ae4c70544ace9201285d63fe"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/floor_ruins.png",
+      "to": "Assets/_Project/Art/Textures/floor_ruins.png",
+      "key": "DungeonTiles/floor_ruins",
+      "guid": "733a472e9a500d547ae89b41be4d38ab"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/floor_stone.png",
+      "to": "Assets/_Project/Art/Textures/floor_stone.png",
+      "key": "DungeonTiles/floor_stone",
+      "guid": "fe5340e8464cde9459f7d71c94b69498"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/floor_supply.png",
+      "to": "Assets/_Project/Art/Textures/floor_supply.png",
+      "key": "DungeonTiles/floor_supply",
+      "guid": "e523838202819c64c81d48c3eb2e9435"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/floor_treasure.png",
+      "to": "Assets/_Project/Art/Textures/floor_treasure.png",
+      "key": "DungeonTiles/floor_treasure",
+      "guid": "e88c5f715b607664a81cbcaacefb73a9"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/prop_crate.png",
+      "to": "Assets/_Project/Art/Textures/prop_crate_a04af61d.png",
+      "key": "DungeonTiles/prop_crate",
+      "guid": "a04af61de8291ef4eb6df205e35b8b24"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/prop_lamp.png",
+      "to": "Assets/_Project/Art/Textures/prop_lamp.png",
+      "key": "DungeonTiles/prop_lamp",
+      "guid": "137bcae06ac369840a858f684fa048a4"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/prop_pillar.png",
+      "to": "Assets/_Project/Art/Textures/prop_pillar.png",
+      "key": "DungeonTiles/prop_pillar",
+      "guid": "44793ef0128e8004bb0a003fd6d22779"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/trap_spikes.png",
+      "to": "Assets/_Project/Art/Textures/trap_spikes.png",
+      "key": "DungeonTiles/trap_spikes",
+      "guid": "79f5787dec9ad994d8c537cfebd6174f"
+    },
+    {
+      "from": "Assets/Resources/DungeonTiles/wall_stone.png",
+      "to": "Assets/_Project/Art/Textures/wall_stone_f3465059.png",
+      "key": "DungeonTiles/wall_stone",
+      "guid": "f34650590b9a1244a89f7708d79c8d55"
+    },
+    {
+      "from": "Assets/Resources/ItemIcons/armor_plate.png",
+      "to": "Assets/_Project/Art/Textures/armor_plate.png",
+      "key": "ItemIcons/armor_plate",
+      "guid": "a620dde5bf1806749913402726209764"
+    },
+    {
+      "from": "Assets/Resources/ItemIcons/armor_upgrade.png",
+      "to": "Assets/_Project/Art/Textures/armor_upgrade.png",
+      "key": "ItemIcons/armor_upgrade",
+      "guid": "d9621cdc627c1a24088bb1ef3a05ab5b"
+    },
+    {
+      "from": "Assets/Resources/ItemIcons/crystal.png",
+      "to": "Assets/_Project/Art/Textures/crystal.png",
+      "key": "ItemIcons/crystal",
+      "guid": "3709bbc06d707954287630bc4d391ae3"
+    },
+    {
+      "from": "Assets/Resources/ItemIcons/health_potion.png",
+      "to": "Assets/_Project/Art/Textures/health_potion.png",
+      "key": "ItemIcons/health_potion",
+      "guid": "b87feadf62ca4f445aee687cb574be1d"
+    },
+    {
+      "from": "Assets/Resources/ItemIcons/iron.png",
+      "to": "Assets/_Project/Art/Textures/iron.png",
+      "key": "ItemIcons/iron",
+      "guid": "5bd02c30493546449816be9fb8807332"
+    },
+    {
+      "from": "Assets/Resources/ItemIcons/metal_plate.png",
+      "to": "Assets/_Project/Art/Textures/metal_plate.png",
+      "key": "ItemIcons/metal_plate",
+      "guid": "8b8b50caab80a45428512c67d3dd30fc"
+    },
+    {
+      "from": "Assets/Resources/ItemIcons/scrap.png",
+      "to": "Assets/_Project/Art/Textures/scrap.png",
+      "key": "ItemIcons/scrap",
+      "guid": "5329af4c5f27fa84f912278bd7798f20"
+    },
+    {
+      "from": "Assets/Resources/ItemIcons/weapon_part.png",
+      "to": "Assets/_Project/Art/Textures/weapon_part.png",
+      "key": "ItemIcons/weapon_part",
+      "guid": "e62a2095c6252744b83a13965ef412ee"
+    },
+    {
+      "from": "Assets/Resources/ItemIcons/weapon_upgrade.png",
+      "to": "Assets/_Project/Art/Textures/weapon_upgrade.png",
+      "key": "ItemIcons/weapon_upgrade",
+      "guid": "c2c1178d5905b8748b446ebb7bfab737"
+    },
+    {
+      "from": "Assets/Resources/ItemIcons/wood.png",
+      "to": "Assets/_Project/Art/Textures/wood.png",
+      "key": "ItemIcons/wood",
+      "guid": "c6caf580a27bdd340b6fec1dd8c40386"
+    }
+  ]
+}
